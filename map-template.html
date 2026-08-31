@@ -1,0 +1,1532 @@
+<title>Avoca Weather Demand Watch</title>
+<style>
+  :root {
+    --bg: #EEF1F4;
+    --panel: #FFFFFF;
+    --panel-2: #E4E9EE;
+    --land: #FBFCFD;
+    --border-state: #D3DAE2;
+    --border-nation: #B7C1CC;
+    --ink: #1C2530;
+    --ink-2: #4A5766;
+    --ink-3: #8391A0;
+    --line: #D8DEE5;
+    --accent: #B96E12;
+    --accent-bg: #F5EBDB;
+    --good: #1E7A46;
+    --heat: #C14E13;
+    --storm: #6D55B8;
+    --flood: #0E7490;
+    --freeze: #3D6FA8;
+    --outage: #8A6A00;
+    --quiet: #93A0AE;
+    --chip-heat-bg: #F6E5DC; --chip-storm-bg: #EAE5F5;
+    --chip-flood-bg: #DDEEF3; --chip-freeze-bg: #E1EAF4;
+    --chip-outage-bg: #F1EAD2; --chip-quiet-bg: #E7EBEF;
+    --narrow: #3D6FA8; --wide: #B96E12;
+    --shadow: 0 8px 28px rgba(20, 30, 42, 0.14);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0F141B; --panel: #161D26; --panel-2: #1F2833;
+      --land: #1A222C; --border-state: #2A3441; --border-nation: #3A4655;
+      --ink: #E6EBF1; --ink-2: #AAB6C3; --ink-3: #75828F; --line: #2C3642;
+      --accent: #E29A3C; --accent-bg: #322817; --good: #4FB477;
+      --heat: #F07B4A; --storm: #A78BE8; --flood: #4FB3D1; --freeze: #7FA9DE;
+      --outage: #D9B23F; --quiet: #5A6878;
+      --chip-heat-bg: #3A2620; --chip-storm-bg: #2C2740;
+      --chip-flood-bg: #1B3340; --chip-freeze-bg: #223349;
+      --chip-outage-bg: #332C15; --chip-quiet-bg: #232C36;
+      --narrow: #7FA9DE; --wide: #E29A3C;
+      --shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F141B; --panel: #161D26; --panel-2: #1F2833;
+    --land: #1A222C; --border-state: #2A3441; --border-nation: #3A4655;
+    --ink: #E6EBF1; --ink-2: #AAB6C3; --ink-3: #75828F; --line: #2C3642;
+    --accent: #E29A3C; --accent-bg: #322817; --good: #4FB477;
+    --heat: #F07B4A; --storm: #A78BE8; --flood: #4FB3D1; --freeze: #7FA9DE;
+    --outage: #D9B23F; --quiet: #5A6878;
+    --chip-heat-bg: #3A2620; --chip-storm-bg: #2C2740;
+    --chip-flood-bg: #1B3340; --chip-freeze-bg: #223349;
+    --chip-outage-bg: #332C15; --chip-quiet-bg: #232C36;
+    --narrow: #7FA9DE; --wide: #E29A3C;
+    --shadow: 0 8px 28px rgba(0, 0, 0, 0.5);
+  }
+  :root[data-theme="light"] {
+    --bg: #EEF1F4; --panel: #FFFFFF; --panel-2: #E4E9EE;
+    --land: #FBFCFD; --border-state: #D3DAE2; --border-nation: #B7C1CC;
+    --ink: #1C2530; --ink-2: #4A5766; --ink-3: #8391A0; --line: #D8DEE5;
+    --accent: #B96E12; --accent-bg: #F5EBDB; --good: #1E7A46;
+    --heat: #C14E13; --storm: #6D55B8; --flood: #0E7490; --freeze: #3D6FA8;
+    --outage: #8A6A00; --quiet: #93A0AE;
+    --chip-heat-bg: #F6E5DC; --chip-storm-bg: #EAE5F5;
+    --chip-flood-bg: #DDEEF3; --chip-freeze-bg: #E1EAF4;
+    --chip-outage-bg: #F1EAD2; --chip-quiet-bg: #E7EBEF;
+    --narrow: #3D6FA8; --wide: #B96E12;
+    --shadow: 0 8px 28px rgba(20, 30, 42, 0.14);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Avenir Next", "Seravek", "Segoe UI", system-ui, sans-serif;
+    font-size: 14px; line-height: 1.5;
+  }
+  .display { font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-variant-numeric: tabular-nums; }
+
+  #app { display: flex; flex-direction: column; height: 100vh; }
+
+  /* ---------- header ---------- */
+  header {
+    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    padding: 12px 20px; background: var(--panel);
+    border-bottom: 1px solid var(--line); z-index: 5;
+  }
+  .brand { display: flex; flex-direction: column; }
+  .brand .t {
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+    font-size: 19px; font-weight: 700; letter-spacing: 0.01em; line-height: 1.15;
+  }
+  .brand .s {
+    font-size: 11px; color: var(--ink-3); letter-spacing: 0.1em; text-transform: uppercase;
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif; font-weight: 600;
+  }
+  .hstat { display: flex; gap: 16px; align-items: center; font-size: 12.5px; color: var(--ink-2); flex-wrap: wrap; }
+  .hstat b { color: var(--ink); font-weight: 600; }
+  .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--good); margin-right: 6px; }
+  @media (prefers-reduced-motion: no-preference) {
+    .live-dot { animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 50% { opacity: 0.35; } }
+  }
+  .seg { display: flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; margin-left: auto; }
+  .seg button {
+    border: none; background: var(--panel); color: var(--ink-2); cursor: pointer;
+    padding: 6px 14px; font: inherit; font-size: 12.5px; font-weight: 600;
+  }
+  .seg button + button { border-left: 1px solid var(--line); }
+  .seg button.on { background: var(--ink); color: var(--panel); }
+  .seg button:focus-visible, .chipbtn:focus-visible, .marker:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  /* ---------- layout ---------- */
+  #body { display: flex; flex: 1; min-height: 0; }
+  #mapwrap { flex: 1; position: relative; min-width: 0; display: flex; align-items: center; justify-content: center; padding: 10px; }
+  #mapwrap svg { width: 100%; height: 100%; max-height: calc(100vh - 120px); }
+
+  #rail {
+    width: 400px; max-width: 46vw; border-left: 1px solid var(--line);
+    background: var(--panel); display: flex; flex-direction: column; min-height: 0;
+  }
+  @media (max-width: 860px) {
+    #body { flex-direction: column; }
+    #mapwrap { min-height: 46vh; }
+    #mapwrap svg { max-height: 44vh; }
+    #rail { width: 100%; max-width: none; border-left: none; border-top: 1px solid var(--line); flex: 1; }
+  }
+
+  /* ---------- map ---------- */
+  .nation { fill: var(--land); stroke: var(--border-nation); stroke-width: 1; }
+  .mesh { fill: none; stroke: var(--border-state); stroke-width: 0.7; }
+  .marker { cursor: pointer; }
+  .marker circle.core { stroke: var(--panel); stroke-width: 1.6; }
+  .marker.dim { opacity: 0.38; }
+  .marker text {
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+    font-size: 11.5px; font-weight: 600; letter-spacing: 0.04em;
+    fill: var(--ink-2); text-anchor: middle; pointer-events: none;
+    paint-order: stroke; stroke: var(--land); stroke-width: 3px; stroke-linejoin: round;
+  }
+  .marker.sel text { fill: var(--ink); }
+  .ring { fill: none; stroke-width: 1.6; opacity: 0.85; }
+  @media (prefers-reduced-motion: no-preference) {
+    .ring { animation: ringpulse 2.2s ease-out infinite; transform-origin: center; transform-box: fill-box; }
+    @keyframes ringpulse { 0% { opacity: 0.9; } 70% { opacity: 0.25; } 100% { opacity: 0.9; } }
+  }
+  .selhalo { fill: none; stroke: var(--ink); stroke-width: 1.2; stroke-dasharray: 3 3; }
+
+  #tooltip {
+    position: absolute; pointer-events: none; display: none; z-index: 10;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
+    box-shadow: var(--shadow); padding: 8px 12px; max-width: 280px; font-size: 12.5px;
+  }
+  #tooltip .tt-name { font-weight: 600; }
+  #tooltip .tt-sub { color: var(--ink-2); }
+
+  #legend {
+    position: absolute; left: 18px; bottom: 14px; z-index: 4;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
+    padding: 8px 12px; font-size: 11.5px; color: var(--ink-2);
+    display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+  }
+  #legend .li { display: flex; align-items: center; gap: 5px; }
+  #legend .sw { width: 9px; height: 9px; border-radius: 50%; }
+
+  /* ---------- rail ---------- */
+  #scorecards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 14px 14px 4px; }
+  .scard {
+    border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px;
+    background: var(--panel); cursor: pointer; text-align: left; font: inherit; color: inherit;
+  }
+  .scard.on { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+  .scard .cfg {
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+    font-size: 11.5px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  .scard.narrow .cfg { color: var(--narrow); }
+  .scard.wide .cfg { color: var(--wide); }
+  .scard .rc { font-size: 21px; font-weight: 600; margin-top: 2px; }
+  .scard .rc span { color: var(--ink-3); font-size: 14px; }
+  .scard .sub { font-size: 11px; color: var(--ink-3); line-height: 1.35; margin-top: 2px; }
+
+  #typechips { display: flex; gap: 6px; flex-wrap: wrap; padding: 10px 14px 12px; border-bottom: 1px solid var(--line); }
+  .chipbtn {
+    border: 1px solid var(--line); background: var(--panel); color: var(--ink-2);
+    border-radius: 99px; padding: 3px 11px; font: inherit; font-size: 11.5px; font-weight: 600;
+    cursor: pointer; letter-spacing: 0.04em; text-transform: uppercase;
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+  }
+  .chipbtn .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 5px; vertical-align: 1px; }
+  .chipbtn.on { color: var(--ink); border-color: var(--ink-2); background: var(--panel-2); }
+
+  #railscroll { overflow-y: auto; flex: 1; min-height: 0; }
+
+  #detail { border-bottom: 1px solid var(--line); padding: 14px; background: var(--panel-2); }
+  #detail .dh { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  #detail h2 {
+    margin: 0; font-size: 18px; font-weight: 700;
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+  }
+  #detail .close {
+    border: none; background: none; color: var(--ink-3); cursor: pointer;
+    font-size: 16px; padding: 2px 6px; line-height: 1;
+  }
+  #detail .counties { font-size: 11.5px; color: var(--ink-3); margin: 2px 0 0; }
+  #detail .why { font-size: 12.5px; color: var(--ink-2); margin: 8px 0 0; }
+  #detail .cov { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .covpill {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+    padding: 2px 9px; border-radius: 99px; border: 1px solid var(--line); color: var(--ink-3);
+  }
+  .covpill.has { color: var(--ink); border-color: var(--ink-3); }
+  #detail .alerts { margin-top: 12px; }
+  #detail .alerts h3 {
+    margin: 0 0 6px; font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-3); font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif; font-weight: 600;
+  }
+  .alertrow { display: flex; gap: 8px; align-items: baseline; padding: 5px 0; border-top: 1px solid var(--line); font-size: 12.5px; }
+  .alertrow .an { font-weight: 600; }
+  .alertrow .at { color: var(--ink-3); margin-left: auto; white-space: nowrap; }
+  .badge-active {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.08em; color: var(--good);
+    border: 1px solid var(--good); border-radius: 99px; padding: 0 7px; text-transform: uppercase;
+  }
+  .badge-exp { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: var(--ink-3); border: 1px solid var(--line); border-radius: 99px; padding: 0 7px; text-transform: uppercase; }
+
+  /* surge brief */
+  .brief {
+    margin-top: 14px; border: 1px solid var(--accent); border-radius: 6px;
+    background: var(--panel); overflow: hidden;
+  }
+  .brief .bh {
+    display: flex; align-items: center; gap: 8px; padding: 8px 12px;
+    background: var(--accent-bg); color: var(--accent);
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+    font-size: 11.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  .brief .bb { padding: 10px 12px 12px; font-size: 12.5px; }
+  .brief h4 { margin: 0 0 6px; font-size: 14px; font-weight: 600; line-height: 1.35; }
+  .brief .brow { margin-top: 8px; }
+  .brief .brow .bl {
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--ink-3); display: block;
+  }
+  .brief .brow .bv { color: var(--ink-2); line-height: 1.5; }
+  .brief .outbound {
+    margin-top: 10px; padding: 8px 11px; border-left: 3px solid var(--accent);
+    background: var(--accent-bg); border-radius: 0 4px 4px 0; font-style: italic; color: var(--ink);
+  }
+
+  /* buyer map */
+  .buyers { margin-top: 14px; }
+  .buyers .snapshot { font-size: 12.5px; color: var(--ink-2); margin: 6px 0 8px; line-height: 1.5; }
+  .buyerrow { border-top: 1px solid var(--line); padding: 8px 0; font-size: 12.5px; }
+  .buyerrow .b1 { display: flex; gap: 7px; align-items: baseline; flex-wrap: wrap; }
+  .buyerrow .bn { font-weight: 600; }
+  .buyerrow .bp { color: var(--ink-3); font-size: 11.5px; }
+  .buyerrow .bnote { color: var(--ink-2); margin-top: 2px; line-height: 1.45; }
+  .btype {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+    border-radius: 99px; padding: 0 7px;
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+  }
+  .btype.pe { color: var(--wide); background: var(--accent-bg); }
+  .btype.fr { color: var(--storm); background: var(--chip-storm-bg); }
+  .btype.ind { color: var(--ink-2); background: var(--chip-quiet-bg); }
+  .rollup-note { font-size: 12px; color: var(--ink-2); margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); line-height: 1.5; }
+
+  /* rail tabs */
+  #railtabs { display: flex; border-bottom: 1px solid var(--line); flex: 0 0 auto; }
+  .railtab {
+    flex: 1; border: none; background: none; color: var(--ink-3); cursor: pointer;
+    padding: 11px 8px; font: inherit; font-size: 12.5px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+    border-bottom: 2px solid transparent;
+  }
+  .railtab.on { color: var(--ink); border-bottom-color: var(--accent); }
+  .railtab:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  #tab-count { color: var(--ink-3); font-weight: 500; }
+  #pane-monitors, #pane-callers { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+  #pane-monitors[hidden], #pane-callers[hidden] { display: none; }
+  #callerscroll { overflow-y: auto; flex: 1; min-height: 0; }
+  #caller-search { padding: 12px 14px; border-bottom: 1px solid var(--line); flex: 0 0 auto; }
+  #caller-status { font-size: 12px; color: var(--ink-2); margin-top: 8px; min-height: 0; }
+  #caller-status .spin { margin-right: 6px; vertical-align: -1px; }
+  #caller-history { padding: 10px 14px; border-bottom: 1px solid var(--line); flex: 0 0 auto; }
+  .hist-bar { display: flex; gap: 8px; }
+  .hist-bar input {
+    flex: 1; font: inherit; font-size: 12.5px; padding: 6px 10px;
+    border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink);
+  }
+  .hist-bar select {
+    font: inherit; font-size: 12px; border: 1px solid var(--line); border-radius: 6px;
+    background: var(--bg); color: var(--ink-2); padding: 0 6px;
+  }
+  .hist-meta {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    margin-top: 8px; font-size: 11.5px; color: var(--ink-3);
+  }
+  .hist-actions { display: flex; gap: 6px; }
+  .hist-actions button {
+    border: 1px solid var(--line); background: var(--panel); color: var(--ink-2);
+    border-radius: 5px; padding: 3px 9px; font: inherit; font-size: 11px; font-weight: 600; cursor: pointer;
+  }
+  .hist-actions button:hover { color: var(--ink); }
+  .caller-head .cwhen { float: right; font-size: 11px; color: var(--ink-3); font-weight: 500; }
+
+  /* caller lookup */
+  .phone-row { display: flex; gap: 8px; }
+  .phone-row input {
+    flex: 1; font: inherit; font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px;
+    background: var(--bg); color: var(--ink);
+  }
+  .phone-row select {
+    font: inherit; font-size: 12.5px; border: 1px solid var(--line); border-radius: 6px;
+    background: var(--bg); color: var(--ink-2); padding: 0 8px;
+  }
+  .phone-row button {
+    border: none; background: var(--accent); color: #fff; border-radius: 6px;
+    padding: 8px 18px; font: inherit; font-weight: 600; cursor: pointer;
+  }
+  .phone-row button:disabled { opacity: 0.5; cursor: default; }
+  .stage { margin-top: 14px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 6px; font-size: 13px; }
+  .stage .sh {
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-3); margin-bottom: 6px; display: flex; align-items: center; gap: 8px;
+  }
+  .stage.pending { opacity: 0.55; }
+  .spin {
+    display: inline-block; width: 10px; height: 10px; border-radius: 50%;
+    border: 2px solid var(--accent); border-top-color: transparent;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .spin { animation: spin 0.9s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  }
+  .kv { display: grid; grid-template-columns: 118px 1fr; gap: 3px 12px; font-size: 12.5px; }
+  .kv .k { color: var(--ink-3); }
+  .kv .v { color: var(--ink); overflow-wrap: anywhere; }
+  .conf { font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border-radius: 99px; padding: 0 6px; margin-left: 6px; }
+  .conf.high { color: var(--good); border: 1px solid var(--good); }
+  .conf.medium { color: var(--accent); border: 1px solid var(--accent); }
+  .conf.low { color: var(--ink-3); border: 1px solid var(--line); }
+  .evidence { margin-top: 8px; font-size: 12px; color: var(--ink-2); line-height: 1.5; border-top: 1px solid var(--line); padding-top: 8px; }
+  .stage .cites { margin-top: 6px; font-size: 11.5px; color: var(--ink-3); }
+  .stage .cites a { color: var(--ink-3); }
+  .surge-flag {
+    margin-top: 10px; padding: 9px 12px; border-left: 3px solid var(--heat);
+    background: var(--chip-heat-bg); border-radius: 0 4px 4px 0; font-size: 12.5px; color: var(--ink);
+  }
+  .surge-flag.quiet { border-left-color: var(--quiet); background: var(--chip-quiet-bg); color: var(--ink-2); }
+  .stage .mapbtn {
+    margin-top: 8px; border: 1px solid var(--line); background: var(--panel-2); color: var(--ink);
+    border-radius: 6px; padding: 5px 12px; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer;
+  }
+
+  /* caller cards */
+  #callerlist { padding: 12px 14px 28px; display: grid; gap: 12px; }
+  .caller {
+    border: 1px solid var(--line); border-radius: 6px; background: var(--panel); overflow: hidden;
+  }
+  .caller.sel { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+  .caller-head {
+    width: 100%; text-align: left; border: none; background: none; color: inherit;
+    font: inherit; cursor: pointer; padding: 12px 14px; display: block;
+  }
+  .caller-head .cn { font-size: 15px; font-weight: 600; line-height: 1.3; }
+  .caller-head .cmeta { font-size: 12px; color: var(--ink-2); margin-top: 2px; }
+  .caller-head .caddr {
+    font-size: 12.5px; margin-top: 6px; color: var(--ink);
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  .caller-head .cspec {
+    font-size: 12px; color: var(--accent); margin-top: 4px; font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .caller-head .cflags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 7px; align-items: center; }
+  .linkbtn {
+    border: none; background: none; color: var(--accent); cursor: pointer;
+    font: inherit; font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em;
+    text-transform: uppercase; padding: 0 0 0 4px; text-decoration: underline;
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+  }
+  .caller-body { border-top: 1px solid var(--line); padding: 12px 14px; }
+  .sect {
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.11em; text-transform: uppercase;
+    color: var(--ink-3); margin: 12px 0 6px;
+  }
+  .sect:first-child { margin-top: 0; }
+  .addr-row {
+    border-top: 1px solid var(--line); padding: 8px 0; font-size: 12.5px; cursor: pointer;
+  }
+  .addr-row:hover { background: var(--panel-2); }
+  .addr-row.chosen { border-left: 3px solid var(--accent); padding-left: 8px; }
+  .addr-row .a1 { display: flex; gap: 6px; align-items: baseline; flex-wrap: wrap; }
+  .addr-row .rank {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace; color: var(--ink-3); font-size: 11px;
+  }
+  .addr-row .astreet { font-weight: 600; font-family: ui-monospace, "SF Mono", Menlo, monospace; }
+  .addr-row .acity { color: var(--ink-2); }
+  .addr-row .aev { color: var(--ink-2); font-size: 11.5px; margin-top: 3px; line-height: 1.45; }
+  .addr-row .asrc { color: var(--ink-3); font-size: 11px; margin-top: 3px; }
+  .atype {
+    font-size: 9.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    border-radius: 99px; padding: 0 6px;
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+  }
+  .atype.current_residential { color: var(--good); background: var(--chip-quiet-bg); }
+  .atype.former_residential { color: var(--freeze); background: var(--chip-freeze-bg); }
+  .atype.household_or_relative { color: var(--storm); background: var(--chip-storm-bg); }
+  .atype.business_or_mailing, .atype.former_business { color: var(--ink-2); background: var(--chip-quiet-bg); }
+  .atype.po_box, .atype.unconfirmed { color: var(--ink-3); background: var(--chip-quiet-bg); }
+  .prop-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); gap: 8px; margin-top: 4px;
+  }
+  .prop-tile {
+    background: var(--panel-2); border-radius: 5px; padding: 7px 9px;
+  }
+  .prop-tile .pv {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace; font-variant-numeric: tabular-nums;
+    font-size: 14px; font-weight: 600; line-height: 1.2;
+  }
+  .prop-tile .pl {
+    font-size: 9.5px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-3); margin-top: 2px;
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif; font-weight: 600;
+  }
+  .prop-kv { display: grid; grid-template-columns: 108px 1fr; gap: 3px 10px; font-size: 12px; margin-top: 8px; }
+  .prop-kv .k { color: var(--ink-3); }
+  .caller-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  .caller-actions button {
+    border: 1px solid var(--line); background: var(--panel-2); color: var(--ink);
+    border-radius: 6px; padding: 5px 11px; font: inherit; font-size: 11.5px; font-weight: 600; cursor: pointer;
+  }
+  .caller-actions button:disabled { opacity: 0.5; cursor: default; }
+  .modal-x { float: right; border: none; background: none; color: var(--ink-3); font-size: 17px; cursor: pointer; padding: 0 4px; }
+  .caller-pin text {
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+    font-size: 11.5px; font-weight: 700; fill: var(--accent); text-anchor: middle;
+    paint-order: stroke; stroke: var(--land); stroke-width: 3px;
+  }
+  .pii-note { font-size: 11px; color: var(--ink-3); margin-top: 12px; line-height: 1.45; }
+
+  #feed { padding: 10px 14px 24px; display: grid; gap: 10px; }
+  #feedhead { font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); padding: 12px 14px 0; font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif; font-weight: 600; }
+  .evt { border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; background: var(--panel); }
+  .evt .chips { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .chip {
+    display: inline-block; font-size: 10.5px; font-weight: 600; letter-spacing: 0.05em;
+    padding: 1px 8px; border-radius: 99px; text-transform: uppercase;
+    font-family: "Avenir Next Condensed", "Arial Narrow", system-ui, sans-serif;
+  }
+  .chip.heat { color: var(--heat); background: var(--chip-heat-bg); }
+  .chip.storm { color: var(--storm); background: var(--chip-storm-bg); }
+  .chip.flood { color: var(--flood); background: var(--chip-flood-bg); }
+  .chip.freeze { color: var(--freeze); background: var(--chip-freeze-bg); }
+  .chip.outage { color: var(--outage); background: var(--chip-outage-bg); }
+  .chip.other { color: var(--ink-2); background: var(--chip-quiet-bg); }
+  .chip.cfg-narrow { color: var(--narrow); background: var(--chip-freeze-bg); }
+  .chip.cfg-wide { color: var(--wide); background: var(--accent-bg); }
+  .evt .when { font-size: 11px; color: var(--ink-3); margin-left: auto; white-space: nowrap; }
+  .evt h3 { margin: 7px 0 2px; font-size: 14.5px; font-weight: 600; line-height: 1.35; }
+  .evt .metro-line { font-size: 12px; color: var(--ink-2); }
+  .evt .demand {
+    margin-top: 8px; padding: 7px 10px; font-size: 12.5px; line-height: 1.5;
+    background: var(--panel-2); border-left: 3px solid var(--accent); border-radius: 0 4px 4px 0;
+    color: var(--ink-2);
+  }
+  .evt .demand b { color: var(--accent); }
+  .evt .srcs { margin-top: 7px; font-size: 11.5px; color: var(--ink-3); }
+  .evt .srcs a { color: var(--ink-3); }
+  .empty { color: var(--ink-3); font-size: 13px; padding: 18px 4px; text-align: center; }
+</style>
+
+<div id="app">
+  <header>
+    <div class="brand">
+      <span class="t">Weather Demand Watch</span>
+      <span class="s">Parallel × Avoca · <span id="h-sub-metros"></span>-metro monitor</span>
+    </div>
+    <div class="hstat">
+      <span><span class="live-dot"></span><b>LIVE</b></span>
+      <span><b id="h-metros"></b> metros</span>
+      <span><b id="h-monitors"></b> monitors · hourly</span>
+      <span>updated <b id="h-updated"></b></span>
+    </div>
+    <div class="seg" role="group" aria-label="Config filter">
+      <button data-cfg="all" class="on">All</button>
+      <button data-cfg="narrow">Narrow</button>
+      <button data-cfg="wide">Wide</button>
+    </div>
+  </header>
+
+  <div id="body">
+    <div id="mapwrap">
+      <svg viewBox="0 0 975 610" role="img" aria-label="US map of monitored metros">
+        <path class="nation" d="__NATION_PATH__"></path>
+        <path class="mesh" d="__MESH_PATH__"></path>
+        <g id="markers"></g>
+      </svg>
+      <div id="tooltip"></div>
+      <div id="legend">
+        <span class="li"><span class="sw" style="background:var(--heat)"></span>heat</span>
+        <span class="li"><span class="sw" style="background:var(--storm)"></span>storm</span>
+        <span class="li"><span class="sw" style="background:var(--flood)"></span>flood</span>
+        <span class="li"><span class="sw" style="background:var(--freeze)"></span>freeze</span>
+        <span class="li"><span class="sw" style="background:var(--outage)"></span>outage</span>
+        <span class="li"><span class="sw" style="background:var(--quiet)"></span>quiet</span>
+        <span class="li">size = events · ring = active warning</span>
+      </div>
+    </div>
+
+    <aside id="rail">
+      <div id="railtabs" role="tablist">
+        <button class="railtab on" data-tab="monitors" role="tab">Monitors</button>
+        <button class="railtab" data-tab="callers" role="tab" hidden>Callers <span id="tab-count"></span></button>
+      </div>
+
+      <div id="pane-monitors">
+        <div id="scorecards"></div>
+        <div id="typechips"></div>
+        <div id="railscroll">
+          <div id="detail" hidden></div>
+          <div id="feedhead"></div>
+          <div id="feed"></div>
+        </div>
+      </div>
+
+      <div id="pane-callers" hidden>
+        <div id="caller-search">
+          <div class="phone-row">
+            <input id="caller-phone" type="tel" placeholder="+1 555 555 5555" autocomplete="off">
+            <select id="caller-proc">
+              <option value="core">core</option>
+              <option value="pro">pro</option>
+            </select>
+            <button id="caller-run">Look up</button>
+          </div>
+          <div id="caller-status"></div>
+        </div>
+        <div id="caller-history" hidden>
+          <div class="hist-bar">
+            <input id="caller-q" type="search" placeholder="Search history — name, phone, street, city…" autocomplete="off">
+            <select id="caller-sort" aria-label="Sort call log">
+              <option value="recent">Newest first</option>
+              <option value="oldest">Oldest first</option>
+              <option value="surge">Surge-exposed first</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </div>
+          <div class="hist-meta">
+            <span id="hist-count"></span>
+            <span class="hist-actions">
+              <button id="caller-refresh" title="Reload the shared log">Refresh</button>
+              <button id="caller-export">Export CSV</button>
+              <button id="caller-clear">Clear log</button>
+            </span>
+          </div>
+        </div>
+        <div id="callerscroll">
+          <div id="callerlist"></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script>
+  let DATA = __DATA__;
+
+  const TYPE_CLASS = {
+    heat_wave: "heat", severe_storm: "storm", tropical_system: "storm",
+    flood: "flood", freeze: "freeze", power_outage: "outage",
+    emergency_declaration: "outage", other: "other",
+  };
+  const CLASS_LABEL = { heat: "heat", storm: "storm", flood: "flood", freeze: "freeze", outage: "outage", other: "other" };
+  const CLASS_ORDER = ["heat", "storm", "flood", "freeze", "outage", "other"];
+
+  const state = { cfg: "all", types: new Set(CLASS_ORDER), metro: null };
+
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+  function timeAgo(iso) {
+    if (!iso) return "";
+    const ms = Date.now() - new Date(iso).getTime();
+    if (isNaN(ms)) return "";
+    if (ms < 60000) return "new"; // includes future-dated source timestamps
+    const m = Math.round(ms / 60000);
+    if (m < 60) return m + "m ago";
+    const h = Math.round(m / 60);
+    if (h < 48) return h + "h ago";
+    return Math.round(h / 24) + "d ago";
+  }
+  function fmtSent(iso) {
+    const d = new Date(iso);
+    if (isNaN(d)) return esc(iso);
+    return d.toLocaleString(undefined, { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+  }
+
+  const evtClass = (e) => TYPE_CLASS[e.type] || "other";
+
+  function filteredEvents() {
+    return DATA.events
+      .filter((e) => (state.cfg === "all" || e.config === state.cfg))
+      .filter((e) => state.types.has(evtClass(e)))
+      .filter((e) => (!state.metro || e.metro === state.metro))
+      .sort((a, b) => new Date(b.firstSeen) - new Date(a.firstSeen));
+  }
+
+  document.querySelectorAll(".seg button").forEach((b) => {
+    b.addEventListener("click", () => {
+      state.cfg = b.dataset.cfg;
+      document.querySelectorAll(".seg button").forEach((x) => x.classList.toggle("on", x === b));
+      render();
+    });
+  });
+
+  /* ---------- scorecards ---------- */
+  function renderScorecards() {
+    const sc = DATA.scorecard || {};
+    const mk = (cfg, n) => {
+      const r = sc[cfg];
+      const recall = r && r.recall != null ? Math.round(r.recall * 100) + "%" : "—";
+      const frac = r ? r.matchedAlerts + "<span>/" + r.groundTruthAlerts + "</span>" : "—";
+      const noise = r ? (r.pureNoise === 0 ? "zero noise" : r.pureNoise + " unmatched") : "";
+      return (
+        '<button class="scard ' + cfg + (state.cfg === cfg ? " on" : "") + '" data-cfg="' + cfg + '">' +
+        '<div class="cfg">' + cfg + " · " + n + " monitors</div>" +
+        '<div class="rc mono">' + frac + "</div>" +
+        '<div class="sub">alerts caught (' + recall + ") · " + noise + "</div>" +
+        "</button>"
+      );
+    };
+    $("#scorecards").innerHTML =
+      mk("narrow", DATA.fleet.narrow) + mk("wide", DATA.fleet.wide);
+    document.querySelectorAll(".scard").forEach((b) => {
+      b.addEventListener("click", () => {
+        state.cfg = state.cfg === b.dataset.cfg ? "all" : b.dataset.cfg;
+        document.querySelectorAll(".seg button").forEach((x) => x.classList.toggle("on", x.dataset.cfg === state.cfg));
+        render();
+      });
+    });
+  }
+
+  /* ---------- type chips ---------- */
+  function renderChips() {
+    $("#typechips").innerHTML = CLASS_ORDER.map(
+      (c) =>
+        '<button class="chipbtn' + (state.types.has(c) ? " on" : "") + '" data-type="' + c + '">' +
+        '<span class="dot" style="background:var(--' + (c === "other" ? "quiet" : c) + ')"></span>' +
+        CLASS_LABEL[c] + "</button>"
+    ).join("");
+    document.querySelectorAll(".chipbtn").forEach((b) => {
+      b.addEventListener("click", () => {
+        const t = b.dataset.type;
+        if (state.types.has(t) && state.types.size === 1) {
+          CLASS_ORDER.forEach((c) => state.types.add(c)); // re-expand from solo
+        } else if (state.types.size === CLASS_ORDER.length) {
+          state.types.clear(); state.types.add(t); // solo on first narrow-down
+        } else if (state.types.has(t)) {
+          state.types.delete(t);
+        } else {
+          state.types.add(t);
+        }
+        render();
+      });
+    });
+  }
+
+  /* ---------- map ---------- */
+  const tooltip = $("#tooltip");
+  function renderMap() {
+    const g = $("#markers");
+    const parts = [];
+    for (const m of DATA.metros) {
+      const evts = filteredEvents().filter((e) => e.metro === m.id);
+      const activeAlerts = DATA.alerts.filter((a) => a.metros.includes(m.id) && a.active && a.category !== "irrelevant");
+      const counts = {};
+      evts.forEach((e) => { const c = evtClass(e); counts[c] = (counts[c] || 0) + 1; });
+      const domClass = CLASS_ORDER.find((c) => counts[c]) || null;
+      const color = domClass ? "var(--" + (domClass === "other" ? "quiet" : domClass) + ")" : "var(--quiet)";
+      const r = evts.length ? Math.min(7 + evts.length * 2, 15) : 5;
+      const warning = evts.some((e) => e.severity === "warning" || e.severity === "emergency");
+      const dim = state.metro && state.metro !== m.id;
+      const sel = state.metro === m.id;
+      parts.push(
+        '<g class="marker' + (dim ? " dim" : "") + (sel ? " sel" : "") + '" data-metro="' + m.id + '" tabindex="0" role="button" ' +
+          'aria-label="' + esc(m.name) + ": " + evts.length + ' events">' +
+          (warning ? '<circle class="ring" cx="' + m.x + '" cy="' + m.y + '" r="' + (r + 5) + '" stroke="' + color + '"></circle>' : "") +
+          (sel ? '<circle class="selhalo" cx="' + m.x + '" cy="' + m.y + '" r="' + (r + 9) + '"></circle>' : "") +
+          '<circle class="core" cx="' + m.x + '" cy="' + m.y + '" r="' + r + '" fill="' + color + '"' +
+            (evts.length ? "" : ' fill-opacity="0.55"') + "></circle>" +
+          '<text x="' + m.x + '" y="' + (m.y + r + 13) + '">' + esc(m.name.split(",")[0]) + "</text>" +
+        "</g>"
+      );
+    }
+    g.innerHTML = parts.join("");
+
+    g.querySelectorAll(".marker").forEach((el) => {
+      const id = el.dataset.metro;
+      const select = () => { state.metro = state.metro === id ? null : id; render(); };
+      el.addEventListener("click", select);
+      el.addEventListener("keydown", (ev) => { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); select(); } });
+      el.addEventListener("mousemove", (ev) => {
+        const m = DATA.metros.find((x) => x.id === id);
+        const evts = filteredEvents().filter((e) => e.metro === id);
+        const alerts = DATA.alerts.filter((a) => a.metros.includes(id) && a.active && a.category !== "irrelevant");
+        tooltip.innerHTML =
+          '<div class="tt-name">' + esc(m.name) + "</div>" +
+          '<div class="tt-sub">' + alerts.length + " active NWS alert" + (alerts.length === 1 ? "" : "s") +
+          " · " + evts.length + " monitor event" + (evts.length === 1 ? "" : "s") + "</div>" +
+          (evts[0] ? '<div class="tt-sub" style="margin-top:4px">' + esc(evts[0].headline) + "</div>" : "");
+        tooltip.style.display = "block";
+        const wrap = $("#mapwrap").getBoundingClientRect();
+        let x = ev.clientX - wrap.left + 14, y = ev.clientY - wrap.top + 10;
+        if (x + 290 > wrap.width) x -= 310;
+        tooltip.style.left = x + "px"; tooltip.style.top = y + "px";
+      });
+      el.addEventListener("mouseleave", () => { tooltip.style.display = "none"; });
+    });
+  }
+
+  /* ---------- detail panel ---------- */
+  function renderDetail() {
+    const box = $("#detail");
+    if (!state.metro) { box.hidden = true; box.innerHTML = ""; return; }
+    const m = DATA.metros.find((x) => x.id === state.metro);
+    const alerts = DATA.alerts
+      .filter((a) => a.metros.includes(m.id) && a.category !== "irrelevant")
+      .sort((a, b) => (b.active - a.active) || (new Date(b.sent) - new Date(a.sent)));
+    const covAll = ["freeze", "heat", "storm", "flood"];
+    box.hidden = false;
+    box.innerHTML =
+      '<div class="dh"><h2>' + esc(m.name) + '</h2><button class="close" aria-label="Clear metro selection">✕</button></div>' +
+      '<p class="counties">' + esc(m.counties) + "</p>" +
+      '<p class="why">' + esc(m.note) + "</p>" +
+      '<div class="cov">' +
+        covAll.map((c) =>
+          '<span class="covpill' + (m.coverage.includes(c) ? " has" : "") + '">' +
+          (m.coverage.includes(c) ? "✓ " : "— ") + c + "</span>"
+        ).join("") +
+        '<span class="covpill has">wide ✓</span>' +
+      "</div>" +
+      '<div class="alerts"><h3>NWS ground truth — core counties</h3>' +
+        (alerts.length
+          ? alerts.map((a) =>
+              '<div class="alertrow">' +
+                '<span class="an">' + esc(a.event) + "</span>" +
+                (a.active ? '<span class="badge-active">active</span>' : '<span class="badge-exp">ended</span>') +
+                '<span class="at mono">sent ' + fmtSent(a.sent) + "</span>" +
+              "</div>"
+            ).join("")
+          : '<div class="empty">No trades-relevant alerts logged yet.</div>') +
+      "</div>" +
+      renderBrief(m.id) +
+      renderBuyers(m.id);
+    box.querySelector(".close").addEventListener("click", () => { state.metro = null; render(); });
+  }
+
+  function renderBrief(metroId) {
+    const b = (DATA.briefs || {})[metroId];
+    if (!b) return "";
+    const row = (label, val) =>
+      val ? '<div class="brow"><span class="bl">' + label + '</span><span class="bv">' + esc(val) + "</span></div>" : "";
+    return (
+      '<div class="brief">' +
+        '<div class="bh">Surge brief · generated from this event by the Task API</div>' +
+        '<div class="bb">' +
+          "<h4>" + esc(b.headline) + "</h4>" +
+          '<div class="bv" style="color:var(--ink-2)">' + esc(b.situation) + "</div>" +
+          row("Expected call mix", b.call_forecast) +
+          row("Peak window", b.peak_window) +
+          row("Priority areas", b.priority_areas) +
+          row("Staffing playbook", b.staffing_playbook) +
+          (b.outbound_hook ? '<div class="outbound">Outbound to plan members: “' + esc(b.outbound_hook) + "”</div>" : "") +
+        "</div>" +
+      "</div>"
+    );
+  }
+
+  function renderBuyers(metroId) {
+    const mk = (DATA.market || {})[metroId];
+    if (!mk || !mk.buyers || !mk.buyers.length) return "";
+    const TYPE_BADGE = {
+      pe_rollup_brand: ["pe", "PE roll-up"],
+      franchise: ["fr", "franchise"],
+      large_independent: ["ind", "independent"],
+    };
+    return (
+      '<div class="buyers">' +
+        '<div class="alerts"><h3>Buyer map — who runs the trades here</h3></div>' +
+        '<div class="snapshot">' + esc(mk.market_snapshot) + "</div>" +
+        mk.buyers.map((b) => {
+          const [cls, label] = TYPE_BADGE[b.type] || ["ind", b.type];
+          return (
+            '<div class="buyerrow">' +
+              '<div class="b1"><span class="bn">' + esc(b.company) + '</span>' +
+              '<span class="btype ' + cls + '">' + label + "</span>" +
+              '<span class="bp">' + esc(b.parent !== "independent" ? b.parent : "") +
+                (b.trades ? (b.parent !== "independent" ? " · " : "") + esc(b.trades) : "") + "</span></div>" +
+              (b.note ? '<div class="bnote">' + esc(b.note) + "</div>" : "") +
+            "</div>"
+          );
+        }).join("") +
+        (mk.rollup_activity ? '<div class="rollup-note"><b>Consolidation:</b> ' + esc(mk.rollup_activity) + "</div>" : "") +
+      "</div>"
+    );
+  }
+
+  /* ---------- feed ---------- */
+  function renderFeed() {
+    const evts = filteredEvents();
+    $("#feedhead").textContent =
+      (state.metro ? DATA.metros.find((m) => m.id === state.metro).name.split(",")[0] + " — " : "") +
+      "monitor feed · " + evts.length + " event" + (evts.length === 1 ? "" : "s");
+    $("#feed").innerHTML = evts.length
+      ? evts.map((e) => {
+          const m = DATA.metros.find((x) => x.id === e.metro);
+          const c = evtClass(e);
+          return (
+            '<article class="evt">' +
+              '<div class="chips">' +
+                '<span class="chip ' + c + '">' + CLASS_LABEL[c] + "</span>" +
+                '<span class="chip cfg-' + e.config + '">' + e.config + "</span>" +
+                '<span class="chip other">' + esc(e.severity) + "</span>" +
+                '<span class="when mono">' + timeAgo(e.firstSeen) + "</span>" +
+              "</div>" +
+              "<h3>" + esc(e.headline) + "</h3>" +
+              '<div class="metro-line">' + esc(m ? m.name : e.metro) +
+                (e.nwsRef && e.nwsRef !== "none" ? " · NWS: " + esc(e.nwsRef) : "") +
+                (e.duration ? " · " + esc(e.duration) : "") + "</div>" +
+              (e.demand ? '<div class="demand"><b>demand →</b> ' + esc(e.demand) + "</div>" : "") +
+              (e.sources.length
+                ? '<div class="srcs">' + e.sources.slice(0, 3).map((u) => {
+                    let h; try { h = new URL(u).hostname.replace(/^www\./, ""); } catch { h = u; }
+                    return '<a href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(h) + "</a>";
+                  }).join(" · ") + "</div>"
+                : "") +
+            "</article>"
+          );
+        }).join("")
+      : '<div class="empty">No events match the current filters.</div>';
+  }
+
+  /* ---------- callers tab (live deployment only) ---------- */
+  // A caller record mirrors the enrichment pipeline's field set:
+  //   identity (reverse phone lookup) → ranked candidate addresses (Task run)
+  //   → property details for the chosen address (Task run)
+  // The log lives server-side (Vercel Blob, one blob per caller) so it is
+  // shared across browsers, devices, and everyone on the team.
+  async function loadCallers() {
+    const d = await api("/api/callers");
+    return d.callers || [];
+  }
+
+  // Persist one record. Local state updates immediately; the write is
+  // fire-and-forget with the error surfaced in the status line.
+  function saveCaller(caller) {
+    const record = Object.assign({}, caller);
+    delete record.open; // per-viewer UI state, never shared
+    return api("/api/callers", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ caller: record }),
+    }).catch((e) => setStatus('<span style="color:var(--heat)">save failed — ' + esc(e.message) + "</span>"));
+  }
+
+  async function refreshCallers(silent) {
+    try {
+      const fresh = await loadCallers();
+      // Don't clobber a lookup still writing its stages in this tab.
+      const inflight = state.callers.filter((c) => c.pending);
+      const ids = new Set(inflight.map((c) => c.id));
+      state.callers = inflight.concat(
+        fresh.filter((c) => !ids.has(c.id)).map((c) => Object.assign(c, { open: state.openCards.has(c.id) }))
+      );
+      render();
+    } catch (e) {
+      if (!silent) setStatus('<span style="color:var(--heat)">' + esc(e.message) + "</span>");
+    }
+  }
+
+  function haversineKm(a, b) {
+    const R = 6371, toR = (d) => (d * Math.PI) / 180;
+    const dLat = toR(b[1] - a[1]), dLon = toR(b[0] - a[0]);
+    const h = Math.sin(dLat / 2) ** 2 +
+      Math.cos(toR(a[1])) * Math.cos(toR(b[1])) * Math.sin(dLon / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(h));
+  }
+
+  function nearestMetro(lonlat) {
+    let best = null, bestKm = Infinity;
+    for (const m of DATA.metros) {
+      if (!m.lonlat) continue;
+      const km = haversineKm(m.lonlat, lonlat);
+      if (km < bestKm) { bestKm = km; best = m; }
+    }
+    return best && bestKm <= 100 ? { metro: best, km: Math.round(bestKm) } : null;
+  }
+
+  // The address the caller record is "pinned" to: explicit pick, else the
+  // highest-ranked street-level residential candidate, else rank 1.
+  function chosenAddress(c) {
+    if (!c.addresses || !c.addresses.length) return null;
+    // Property records are pulled for one specific address — if we have them,
+    // that address is what the card is about, so the header must match it.
+    if (c.property && c.propertyForRank) {
+      const pick = c.addresses.find((a) => a.rank === c.propertyForRank);
+      if (pick) return pick;
+    }
+    if (c.chosenRank) {
+      const pick = c.addresses.find((a) => a.rank === c.chosenRank);
+      if (pick) return pick;
+    }
+    return (
+      c.addresses.find((a) => a.street_level && a.address_type === "current_residential") ||
+      c.addresses.find((a) => a.street_level && /residential|household/.test(a.address_type)) ||
+      c.addresses.find((a) => a.street_level) ||
+      c.addresses[0]
+    );
+  }
+
+  function surgeFor(addr) {
+    if (!addr || !addr.geo) return null;
+    const near = nearestMetro([addr.geo.lon, addr.geo.lat]);
+    if (!near) return { outside: true };
+    const evts = DATA.events.filter((e) => e.metro === near.metro.id);
+    const alerts = DATA.alerts.filter(
+      (a) => a.metros.includes(near.metro.id) && a.active && a.category !== "irrelevant"
+    );
+    return { metro: near.metro, km: near.km, events: evts, alerts: alerts, brief: (DATA.briefs || {})[near.metro.id] };
+  }
+
+  /* ---------- map pins for every enriched caller ---------- */
+  function renderCallerPins() {
+    document.querySelectorAll(".caller-pin").forEach((el) => el.remove());
+    const frag = [];
+    for (const c of state.callers) {
+      const a = chosenAddress(c);
+      if (!a || !a.map) continue;
+      const sel = state.selCaller === c.id;
+      const x = a.map.x, y = a.map.y;
+      frag.push(
+        '<g class="caller-pin" data-caller="' + esc(c.id) + '" tabindex="0" role="button" ' +
+          'aria-label="' + esc(c.person.name) + '">' +
+          (sel ? '<circle cx="' + x + '" cy="' + y + '" r="13" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-dasharray="3 3"></circle>' : "") +
+          '<rect x="' + (x - 5) + '" y="' + (y - 5) + '" width="10" height="10" transform="rotate(45 ' + x + " " + y + ')" ' +
+            'fill="var(--accent)" stroke="var(--panel)" stroke-width="1.5"></rect>' +
+          (sel || state.callers.length <= 12
+            ? '<text x="' + x + '" y="' + (y - 13) + '">' + esc(c.person.name.split(" ")[0]) +
+              (a.map.precision === "street" ? "" : " ~") + "</text>"
+            : "") +
+        "</g>"
+      );
+    }
+    if (!frag.length) return;
+    const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    g.setAttribute("class", "caller-pin-layer");
+    document.querySelectorAll(".caller-pin-layer").forEach((el) => el.remove());
+    g.innerHTML = frag.join("");
+    $("#markers").after(g);
+    g.querySelectorAll(".caller-pin").forEach((el) => {
+      el.addEventListener("click", () => {
+        state.selCaller = el.dataset.caller;
+        state.tab = "callers";
+        render();
+        const card = document.getElementById("caller-" + el.dataset.caller);
+        if (card) card.scrollIntoView({ block: "center", behavior: "smooth" });
+      });
+    });
+  }
+
+  /* ---------- lookup pipeline ---------- */
+  const spin = '<span class="spin"></span>';
+
+  function setStatus(html) { $("#caller-status").innerHTML = html; }
+
+  // Enrichment is gated: the token arrives once via #t=… in the URL and is
+  // kept in localStorage so the link only has to be shared a single time.
+  const TOKEN_KEY = "avoca.enrichToken";
+  function enrichToken() {
+    const m = location.hash.match(/[#&]t=([^&]+)/);
+    if (m) {
+      try { localStorage.setItem(TOKEN_KEY, decodeURIComponent(m[1])); } catch {}
+      history.replaceState(null, "", location.pathname + location.search);
+    }
+    try { return localStorage.getItem(TOKEN_KEY) || ""; } catch { return ""; }
+  }
+
+  async function api(path, opts) {
+    const o = opts || {};
+    o.headers = Object.assign({}, o.headers, { "x-enrich-token": enrichToken() });
+    const res = await fetch(path, o);
+    const d = await res.json().catch(() => ({}));
+    if (res.status === 401) throw new Error("Enrichment locked — open the site with the access link (…/#t=TOKEN).");
+    if (!res.ok) throw new Error(d.error || "HTTP " + res.status);
+    return d;
+  }
+
+  async function pollRun(runId, kind, onTick) {
+    const started = Date.now();
+    for (;;) {
+      const d = await api("/api/enrich?runId=" + encodeURIComponent(runId) + "&kind=" + kind);
+      if (d.status === "completed") return d;
+      if (d.status === "failed") throw new Error(kind + " run failed");
+      if (onTick) onTick(Math.round((Date.now() - started) / 1000));
+      await new Promise((r) => setTimeout(r, 6000));
+    }
+  }
+
+  async function runLookup() {
+    const phone = $("#caller-phone").value.trim();
+    const processor = $("#caller-proc").value;
+    if (!phone) return;
+    const btn = $("#caller-run");
+    btn.disabled = true;
+    try {
+      setStatus(spin + "1/3 identity — reverse phone lookup…");
+      const start = await api("/api/enrich", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone: phone, processor: processor }),
+      });
+
+      const caller = {
+        id: "c" + Date.now().toString(36),
+        phone: start.phone,
+        person: start.person,
+        addresses: null,
+        identityMatch: "",
+        property: null,
+        chosenRank: null,
+        addressRunId: start.addressRunId,
+        enrichedAt: new Date().toISOString(),
+        open: true,
+        pending: true,
+      };
+      state.callers.unshift(caller);
+      state.selCaller = caller.id;
+      state.openCards.add(caller.id);
+      await saveCaller(caller);
+      render();
+
+      setStatus(spin + "2/3 addresses — researching street-level candidates for " + esc(start.person.name) + "…");
+      const addr = await pollRun(start.addressRunId, "addresses", (s) =>
+        setStatus(spin + "2/3 addresses — researching candidates for " + esc(start.person.name) + " (" + s + "s)…")
+      );
+      caller.addresses = addr.addresses || [];
+      caller.identityMatch = addr.identityMatch || "";
+      await saveCaller(caller);
+      render();
+
+      const target = chosenAddress(caller);
+      if (target && target.street_level) {
+        setStatus(spin + "3/3 property — pulling records for " + esc(target.street) + "…");
+        const p = await api("/api/enrich", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ address: target.full_address || target.street, processor: processor }),
+        });
+        const pr = await pollRun(p.propertyRunId, "property", (s) =>
+          setStatus(spin + "3/3 property — pulling records (" + s + "s)…")
+        );
+        caller.property = pr.property;
+        caller.propertyForRank = target.rank;
+        setStatus("Done — " + esc(caller.person.name) + " enriched to street level.");
+      } else {
+        setStatus("Addresses found, but no street-level residential candidate to pull property records for.");
+      }
+      caller.pending = false;
+      await saveCaller(caller);
+      render();
+      $("#caller-phone").value = "";
+    } catch (e) {
+      setStatus('<span style="color:var(--heat)">' + esc(e.message) + "</span>");
+      const c = state.callers.find((x) => x.pending);
+      if (c) { c.pending = false; saveCaller(c); render(); }
+    } finally {
+      btn.disabled = false;
+    }
+  }
+
+  async function runPropertyFor(callerId, rank) {
+    const find = () => state.callers.find((x) => x.id === callerId);
+    let c = find();
+    if (!c) return;
+    const a = c.addresses.find((x) => x.rank === rank);
+    if (!a) return;
+    // Persist the pick before the run so a reload (or a teammate) sees which
+    // address this card is about, even while the property lookup is in flight.
+    c.chosenRank = rank;
+    c.property = null;
+    c.propertyForRank = null;
+    c.pending = true;
+    render();
+    await saveCaller(c);
+    try {
+      setStatus(spin + "property — pulling records for " + esc(a.street) + "…");
+      const p = await api("/api/enrich", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ address: a.full_address || a.street }),
+      });
+      const pr = await pollRun(p.propertyRunId, "property", (s) =>
+        setStatus(spin + "property — pulling records (" + s + "s)…")
+      );
+      c = find() || c; // a background refresh may have swapped the object
+      c.chosenRank = rank;
+      c.property = pr.property;
+      c.propertyForRank = rank;
+      setStatus("Property records updated for " + esc(a.street) + ".");
+    } catch (e) {
+      setStatus('<span style="color:var(--heat)">' + esc(e.message) + "</span>");
+      c = find() || c;
+    } finally {
+      c.pending = false;
+      await saveCaller(c);
+      render();
+    }
+  }
+
+  /* ---------- caller roster rendering ---------- */
+  // Treat "Not reported…"-style prose as an empty field so it never becomes a tile.
+  const NOT_REPORTED = /^(not |no |unknown|n\/a|none\b|—|-)/i;
+  function propVal(p, k) {
+    const v = p && p[k] != null ? String(p[k]).trim() : "";
+    return !v || NOT_REPORTED.test(v) ? "" : v;
+  }
+
+  // Fields that belong in a tile must be an actual measurement. The model
+  // sometimes answers with a caveat sentence ("1,000,000 sq ft for the retail
+  // center; Unit 207 interior area was not reported"), which is useful prose
+  // but is not a number — keep it out of the tiles and the header spec line.
+  const NUMERIC_FIELDS = new Set(["bedrooms", "bathrooms", "square_footage", "year_built", "stories", "lot_size"]);
+  function propNum(p, k) {
+    const v = propVal(p, k);
+    if (!v) return "";
+    if (!NUMERIC_FIELDS.has(k)) return v;
+    const clean = v.replace(/ \(.*?\)/g, "").replace(/ ?(sqft|sq\.? ?ft|acres?)\.?$/i, "").trim();
+    return /^[\d.,/]+$/.test(clean) && clean.length <= 12 ? clean : "";
+  }
+
+  function specLine(c) {
+    const p = c.property;
+    if (!p || !String(p.property_found).toLowerCase().startsWith("y")) return "";
+    const bits = [
+      [propNum(p, "bedrooms"), "bd"], [propNum(p, "bathrooms"), "ba"],
+      [propNum(p, "square_footage"), "sqft"],
+    ].filter(([v]) => v).map(([v, u]) => v + " " + u);
+    const yr = propNum(p, "year_built");
+    if (yr) bits.push("built " + yr);
+    const type = propVal(p, "property_type");
+    if (type) bits.push(type);
+    return bits.length ? '<div class="cspec">' + esc(bits.join(" · ")) + "</div>" : "";
+  }
+
+  function propTiles(p) {
+    const tiles = [
+      ["bedrooms", "beds"], ["bathrooms", "baths"], ["square_footage", "sqft"],
+      ["year_built", "built"], ["stories", "stories"], ["lot_size", "lot"],
+    ].filter(([k]) => propNum(p, k));
+    if (!tiles.length) return "";
+    return '<div class="prop-grid">' + tiles.map(([k, label]) =>
+      '<div class="prop-tile"><div class="pv">' + esc(propNum(p, k)) + "</div>" +
+      '<div class="pl">' + label + "</div></div>"
+    ).join("") + "</div>";
+  }
+
+  function propRows(p) {
+    const rows = [
+      ["property_type", "type"], ["estimated_value", "est. value"], ["assessed_value", "assessed"],
+      ["annual_property_tax", "annual tax"], ["last_sold_date", "last sold"], ["last_sold_price", "sold price"],
+      ["hvac_system", "HVAC"], ["hoa_fee", "HOA"], ["parcel_apn", "APN"],
+      // measurements too wordy to be a tile still show here, with their caveat intact
+      ["square_footage", "sqft note"], ["lot_size", "lot note"], ["bedrooms", "beds note"],
+      ["bathrooms", "baths note"], ["sources", "sources"],
+    ].filter(([k]) => propVal(p, k) && (!NUMERIC_FIELDS.has(k) || !propNum(p, k)));
+    if (!rows.length) return "";
+    return '<div class="prop-kv">' + rows.map(([k, label]) =>
+      '<span class="k">' + label + '</span><span class="v">' + esc(propVal(p, k).slice(0, 260)) + "</span>"
+    ).join("") + "</div>";
+  }
+
+  function callerCard(c) {
+    const a = chosenAddress(c);
+    const surge = surgeFor(a);
+    const open = !!c.open;
+    let flags = "";
+    if (a) {
+      flags += '<span class="atype ' + esc(a.address_type) + '">' + esc(a.address_type.replace(/_/g, " ")) + "</span>";
+      if (a.confidence) flags += '<span class="conf ' + esc(a.confidence) + '">' + esc(a.confidence) + "</span>";
+      if (!a.street_level) flags += '<span class="conf low">city only</span>';
+    }
+    if (surge && !surge.outside && (surge.alerts.length || surge.events.length)) {
+      flags += '<span class="chip heat">surge · ' + esc(surge.metro.name.split(",")[0]) + "</span>";
+    }
+
+    let body = "";
+    if (open) {
+      body += '<div class="caller-body">';
+
+      // property first — for a dispatcher this is the payload, so it leads;
+      // the candidate-address research below is the audit trail behind it.
+      if (c.property) {
+        const p = c.property;
+        const forA = c.addresses && c.addresses.find((x) => x.rank === c.propertyForRank);
+        body += '<div class="sect">Property' + (forA ? " · " + esc(forA.street) : "") + "</div>";
+        // Explain an empty spec sheet rather than leaving a blank gap: commercial
+        // records carry no beds/baths, and apartment units often have no
+        // unit-level record at all.
+        const nonResi = forA && !/residential|household/.test(forA.address_type);
+        if (nonResi) {
+          body += '<div class="surge-flag quiet">Pulled from a ' +
+            esc(forA.address_type.replace(/_/g, " ")) +
+            " address — commercial records carry no bedroom/bathroom data. " +
+            "Pick a residential candidate below for home specs.</div>";
+        }
+        if (String(p.property_found).toLowerCase().startsWith("y")) {
+          const tiles = propTiles(p);
+          body += tiles + propRows(p);
+          if (!tiles && !nonResi) {
+            body += '<div class="aev">Record found, but no unit-level bedroom/bathroom/size figures were ' +
+              "published for this address.</div>";
+          }
+        } else {
+          body += '<div class="aev">No public property record matched this address' +
+            (forA && /unit|apt|#/i.test(forA.street) ? " — individual units in a multi-unit building often have no separate public record." : ".") +
+            "</div>";
+        }
+      } else if (c.addresses && c.addresses.length) {
+        body += '<div class="sect">Property</div><div class="aev">' + spin +
+          " pulling records… (or pick a different address below)</div>";
+      }
+
+      // identity
+      body += '<div class="sect">Identity</div><div class="prop-kv">' +
+        '<span class="k">phone</span><span class="v mono">' + esc(c.phone) + "</span>" +
+        (c.person.title ? '<span class="k">title</span><span class="v">' + esc(c.person.title) + "</span>" : "") +
+        (c.person.employer ? '<span class="k">employer</span><span class="v">' + esc(c.person.employer) + "</span>" : "") +
+        (c.person.recommendedEmail ? '<span class="k">email</span><span class="v">' + esc(c.person.recommendedEmail) + "</span>" : "") +
+        (c.person.location ? '<span class="k">stated loc</span><span class="v">' + esc(c.person.location) + "</span>" : "") +
+        (c.person.linkedin ? '<span class="k">linkedin</span><span class="v"><a href="' + esc(c.person.linkedin) + '" target="_blank" rel="noopener">profile</a></span>' : "") +
+        "</div>";
+      if (c.identityMatch) body += '<div class="aev" style="margin-top:6px;color:var(--ink-2);font-size:11.5px">' + esc(c.identityMatch) + "</div>";
+
+      // addresses
+      if (c.addresses === null) {
+        body += '<div class="sect">Addresses</div><div class="aev">' + spin + " researching candidates…</div>";
+      } else {
+        const streetN = c.addresses.filter((x) => x.street_level).length;
+        const showAll = state.openAddrs.has(c.id);
+        const shownAddrs = showAll ? c.addresses : c.addresses.filter((x) => a && x.rank === a.rank);
+        body += '<div class="sect">Candidate addresses · ' + c.addresses.length + " (" + streetN + " street-level)" +
+          (c.addresses.length > 1
+            ? ' <button class="linkbtn" data-act="addrs" data-caller="' + esc(c.id) + '">' +
+              (showAll ? "show less" : "show all " + c.addresses.length) + "</button>"
+            : "") + "</div>";
+        body += shownAddrs.map((x) =>
+          '<div class="addr-row' + (a && x.rank === a.rank ? " chosen" : "") + '" data-caller="' + esc(c.id) + '" data-rank="' + x.rank + '">' +
+            '<div class="a1">' +
+              '<span class="rank">#' + x.rank + "</span>" +
+              '<span class="astreet">' + esc(x.street || "(no street)") + "</span>" +
+              '<span class="acity">' + esc([x.city, x.state, x.postal_code].filter(Boolean).join(", ")) + "</span>" +
+              '<span class="atype ' + esc(x.address_type) + '">' + esc(x.address_type.replace(/_/g, " ")) + "</span>" +
+              (x.confidence ? '<span class="conf ' + esc(x.confidence) + '">' + esc(x.confidence) + "</span>" : "") +
+            "</div>" +
+            (x.evidence ? '<div class="aev">' + esc(x.evidence.slice(0, 220)) + "</div>" : "") +
+            '<div class="asrc">' + esc(x.source_name || "") + (x.as_of ? " · as of " + esc(x.as_of) : "") +
+              (x.source_url ? ' · <a href="' + esc(x.source_url) + '" target="_blank" rel="noopener">source</a>' : "") + "</div>" +
+          "</div>"
+        ).join("");
+      }
+
+      // surge
+      if (surge && !surge.outside) {
+        body += '<div class="sect">Surge exposure</div>';
+        body += (surge.alerts.length || surge.events.length)
+          ? '<div class="surge-flag"><b>' + esc(surge.metro.name.split(",")[0]) + " (" + surge.km + " km)</b> — " +
+            (surge.alerts.length ? surge.alerts.length + " active NWS alert" + (surge.alerts.length === 1 ? "" : "s") + " (" + esc(surge.alerts.map((x) => x.event).slice(0, 2).join(", ")) + ")" : "") +
+            (surge.events.length ? (surge.alerts.length ? " · " : "") + surge.events.length + " monitor event" + (surge.events.length === 1 ? "" : "s") : "") +
+            (surge.brief ? " · surge brief ready" : "") + ". Route as priority.</div>"
+          : '<div class="surge-flag quiet">' + esc(surge.metro.name.split(",")[0]) + " — no active events. Standard intake.</div>";
+      } else if (surge && surge.outside) {
+        body += '<div class="sect">Surge exposure</div><div class="surge-flag quiet">Outside the monitored metros.</div>';
+      }
+
+      body += '<div class="caller-actions">' +
+        (a && surge && !surge.outside ? '<button data-act="metro" data-caller="' + esc(c.id) + '">Open metro</button>' : "") +
+        '<button data-act="remove" data-caller="' + esc(c.id) + '">Remove</button>' +
+        "</div>";
+      body += "</div>";
+    }
+
+    return (
+      '<article class="caller' + (state.selCaller === c.id ? " sel" : "") + '" id="caller-' + esc(c.id) + '">' +
+        '<button class="caller-head" data-caller="' + esc(c.id) + '">' +
+          '<span class="cwhen">' + esc(timeAgo(c.enrichedAt)) + "</span>" +
+          '<div class="cn">' + esc(c.person.name) + "</div>" +
+          '<div class="cmeta">' + esc(c.phone) + (c.person.employer ? " · " + esc(c.person.employer) : "") + "</div>" +
+          (a ? '<div class="caddr">' + esc(a.street || a.city || "") +
+                (a.city ? ", " + esc(a.city) + " " + esc(a.state || "") + " " + esc(a.postal_code || "") : "") + "</div>"
+             : '<div class="caddr">' + spin + " researching…</div>") +
+          specLine(c) +
+          '<div class="cflags">' + flags + "</div>" +
+        "</button>" + body +
+      "</article>"
+    );
+  }
+
+  /* ---------- call log: search, sort, export ---------- */
+  function callerSearchBlob(c) {
+    const a = chosenAddress(c);
+    return [
+      c.person.name, c.phone, c.person.employer, c.person.title, c.person.recommendedEmail,
+      a && a.street, a && a.city, a && a.state, a && a.postal_code,
+      ...(c.addresses || []).map((x) => x.street + " " + x.city),
+    ].filter(Boolean).join(" ").toLowerCase();
+  }
+
+  function visibleCallers() {
+    const q = (state.callerQuery || "").trim().toLowerCase();
+    let list = state.callers.filter((c) => !q || callerSearchBlob(c).includes(q));
+    const surgeScore = (c) => {
+      const s = surgeFor(chosenAddress(c));
+      return s && !s.outside ? s.alerts.length * 2 + s.events.length : 0;
+    };
+    const byTime = (a, b) => new Date(b.enrichedAt) - new Date(a.enrichedAt);
+    if (state.callerSort === "oldest") list = [...list].sort((a, b) => -byTime(a, b));
+    else if (state.callerSort === "name")
+      list = [...list].sort((a, b) => (a.person.name || "").localeCompare(b.person.name || ""));
+    else if (state.callerSort === "surge")
+      list = [...list].sort((a, b) => surgeScore(b) - surgeScore(a) || byTime(a, b));
+    else list = [...list].sort(byTime);
+    return list;
+  }
+
+  // Columns mirror the enrichment pipeline's CSV output so exports drop
+  // straight into the same downstream tooling.
+  const CSV_COLUMNS = [
+    "phone", "person_name", "employer", "title", "recommended_email", "linkedin",
+    "identity_match", "address_rank", "address", "street", "city", "state", "postal_code",
+    "country", "address_type", "address_confidence", "address_as_of", "address_source",
+    "address_evidence", "property_found", "property_type", "bedrooms", "bathrooms",
+    "square_footage", "lot_size", "year_built", "stories", "last_sold_date", "last_sold_price",
+    "estimated_value", "assessed_value", "annual_property_tax", "parcel_apn", "hoa_fee",
+    "hvac_system", "property_sources", "surge_metro", "surge_active_alerts", "looked_up_at",
+  ];
+
+  function exportCsv() {
+    const rows = [CSV_COLUMNS];
+    for (const c of visibleCallers()) {
+      const s = surgeFor(chosenAddress(c));
+      const p = c.property || {};
+      const addrs = c.addresses && c.addresses.length ? c.addresses : [null];
+      for (const a of addrs) {
+        const isPropRow = a && c.propertyForRank === a.rank;
+        rows.push([
+          c.phone, c.person.name, c.person.employer, c.person.title,
+          c.person.recommendedEmail, c.person.linkedin, c.identityMatch,
+          a ? a.rank : "", a ? a.full_address : "", a ? a.street : "", a ? a.city : "",
+          a ? a.state : "", a ? a.postal_code : "", a ? a.country : "",
+          a ? a.address_type : "", a ? a.confidence : "", a ? a.as_of : "",
+          a ? a.source_name : "", a ? a.evidence : "",
+          isPropRow ? p.property_found : "", isPropRow ? p.property_type : "",
+          isPropRow ? p.bedrooms : "", isPropRow ? p.bathrooms : "",
+          isPropRow ? p.square_footage : "", isPropRow ? p.lot_size : "",
+          isPropRow ? p.year_built : "", isPropRow ? p.stories : "",
+          isPropRow ? p.last_sold_date : "", isPropRow ? p.last_sold_price : "",
+          isPropRow ? p.estimated_value : "", isPropRow ? p.assessed_value : "",
+          isPropRow ? p.annual_property_tax : "", isPropRow ? p.parcel_apn : "",
+          isPropRow ? p.hoa_fee : "", isPropRow ? p.hvac_system : "", isPropRow ? p.sources : "",
+          s && !s.outside ? s.metro.name : "", s && !s.outside ? s.alerts.length : "",
+          c.enrichedAt,
+        ].map((v) => {
+          const t = v === null || v === undefined ? "" : String(v);
+          return /[",\n]/.test(t) ? '"' + t.replace(/"/g, '""') + '"' : t;
+        }));
+      }
+    }
+    const blob = new Blob([rows.map((r) => r.join(",")).join("\n")], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "avoca-caller-log.csv";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function renderCallers() {
+    const n = state.callers.length;
+    $("#tab-count").textContent = n ? "· " + n : "";
+    const hist = $("#caller-history");
+    if (hist) hist.hidden = n === 0;
+    const list = $("#callerlist");
+    if (!list) return;
+    const shown = visibleCallers();
+    const countEl = $("#hist-count");
+    if (countEl) {
+      const street = state.callers.filter((c) => { const a = chosenAddress(c); return a && a.street_level; }).length;
+      countEl.textContent =
+        (shown.length === n ? n + " lookup" + (n === 1 ? "" : "s") : shown.length + " of " + n) +
+        " · " + street + " street-level";
+    }
+    list.innerHTML = n
+      ? (shown.length
+          ? shown.map(callerCard).join("")
+          : '<div class="empty">No lookups match that search.</div>')
+      : '<div class="empty">No callers yet. Enter a phone number above — the pipeline resolves identity, ' +
+        "researches street-level address candidates, then pulls property records.<br><br>" +
+        "Every lookup is kept here as a searchable call log.</div>";
+
+    list.querySelectorAll(".caller-head").forEach((el) => {
+      el.addEventListener("click", () => {
+        const c = state.callers.find((x) => x.id === el.dataset.caller);
+        if (!c) return;
+        c.open = !c.open;
+        if (c.open) state.openCards.add(c.id); else state.openCards.delete(c.id);
+        state.selCaller = c.open ? c.id : null;
+        render();
+      });
+    });
+    list.querySelectorAll(".addr-row").forEach((el) => {
+      el.addEventListener("click", () => runPropertyFor(el.dataset.caller, Number(el.dataset.rank)));
+    });
+    list.querySelectorAll("[data-act]").forEach((el) => {
+      el.addEventListener("click", (ev) => {
+        ev.stopPropagation();
+        const c = state.callers.find((x) => x.id === el.dataset.caller);
+        if (!c) return;
+        if (el.dataset.act === "remove") {
+          if (!confirm("Remove " + c.person.name + " from the shared call log?")) return;
+          state.callers = state.callers.filter((x) => x.id !== c.id);
+          render();
+          api("/api/callers?id=" + encodeURIComponent(c.id), { method: "DELETE" })
+            .catch((e) => setStatus('<span style="color:var(--heat)">delete failed — ' + esc(e.message) + "</span>"));
+        } else if (el.dataset.act === "addrs") {
+          if (state.openAddrs.has(c.id)) state.openAddrs.delete(c.id);
+          else state.openAddrs.add(c.id);
+          render();
+        } else if (el.dataset.act === "metro") {
+          const s = surgeFor(chosenAddress(c));
+          if (s && s.metro) { state.metro = s.metro.id; state.tab = "monitors"; render(); }
+        }
+      });
+    });
+  }
+
+  function setTab(tab) {
+    state.tab = tab;
+    document.querySelectorAll(".railtab").forEach((b) => b.classList.toggle("on", b.dataset.tab === tab));
+    $("#pane-monitors").hidden = tab !== "monitors";
+    $("#pane-callers").hidden = tab !== "callers";
+  }
+
+  function render() {
+    renderScorecards();
+    renderChips();
+    renderMap();
+    renderDetail();
+    renderFeed();
+    renderCallers();
+    renderCallerPins();
+  }
+
+  function boot() {
+    $("#h-metros").textContent = DATA.metros.length;
+    $("#h-sub-metros").textContent = DATA.metros.length;
+    $("#h-monitors").textContent = DATA.fleet.narrow + DATA.fleet.wide;
+    $("#h-updated").textContent =
+      timeAgo(DATA.generatedAt) || new Date(DATA.generatedAt).toLocaleString();
+    render();
+  }
+
+  state.callers = [];
+  state.openCards = new Set();
+  state.openAddrs = new Set();
+  state.selCaller = null;
+  state.tab = "monitors";
+  state.callerQuery = "";
+  state.callerSort = "recent";
+
+  if (DATA) {
+    boot();
+  } else {
+    // Live deployment: the Callers tab needs /api/enrich, so it only exists here.
+    document.querySelector('.railtab[data-tab="callers"]').hidden = false;
+    document.querySelectorAll(".railtab").forEach((b) => {
+      b.addEventListener("click", () => { setTab(b.dataset.tab); render(); });
+    });
+    $("#caller-run").addEventListener("click", runLookup);
+    $("#caller-phone").addEventListener("keydown", (e) => { if (e.key === "Enter") runLookup(); });
+    $("#caller-q").addEventListener("input", (e) => { state.callerQuery = e.target.value; renderCallers(); });
+    $("#caller-sort").addEventListener("change", (e) => { state.callerSort = e.target.value; render(); });
+    $("#caller-export").addEventListener("click", exportCsv);
+    $("#caller-clear").addEventListener("click", async () => {
+      if (!confirm("Clear the entire shared call log for everyone? This cannot be undone.")) return;
+      state.callers = [];
+      state.selCaller = null;
+      render();
+      try {
+        await api("/api/callers?all=1", { method: "DELETE" });
+        setStatus("Call log cleared.");
+      } catch (e) {
+        setStatus('<span style="color:var(--heat)">clear failed — ' + esc(e.message) + "</span>");
+        refreshCallers(true);
+      }
+    });
+    $("#caller-refresh").addEventListener("click", () => refreshCallers(false));
+    // Data comes from the serverless API at request time.
+    $("#feedhead").textContent = "loading live monitor data…";
+    fetch("/api/data")
+      .then((r) => { if (!r.ok) throw new Error("api/data " + r.status); return r.json(); })
+      .then((d) => {
+        DATA = d;
+        boot();
+        // Shared call log: load once, then poll so lookups run by teammates
+        // (or in another tab) show up without a manual refresh.
+        refreshCallers(true);
+        setInterval(() => {
+          if (!state.callers.some((c) => c.pending)) refreshCallers(true);
+        }, 30000);
+      })
+      .catch((e) => { $("#feedhead").textContent = "failed to load live data — " + e.message; });
+  }
+</script>

@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-08-07T00:19:37.268Z",
+  "configs": {
+    "narrow": {
+      "totalEvents": 15,
+      "groundTruthAlerts": 18,
+      "matchedAlerts": 14,
+      "recall": 0.778,
+      "latencySamples": 2,
+      "latencyMedianMs": 3153749,
+      "latencyP90Ms": 3153749,
+      "unmatchedEvents": 4,
+      "nonNwsDemandRelevant": 0,
+      "pureNoise": 4
+    },
+    "wide": {
+      "totalEvents": 28,
+      "groundTruthAlerts": 18,
+      "matchedAlerts": 14,
+      "recall": 0.778,
+      "latencySamples": 4,
+      "latencyMedianMs": 1567966,
+      "latencyP90Ms": 3153749,
+      "unmatchedEvents": 19,
+      "nonNwsDemandRelevant": 4,
+      "pureNoise": 15
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/data.ts": {
+      "maxDuration": 60
+    }
+  }
+}

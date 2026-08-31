@@ -1,0 +1,8 @@
+{
+  "name": "avoca-weather-demo",
+  "private": true,
+  "dependencies": {
+    "@vercel/blob": "^2.7.0",
+    "d3-geo": "^2.0.2"
+  }
+}

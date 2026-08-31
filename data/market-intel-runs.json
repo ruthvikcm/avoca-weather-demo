@@ -1,0 +1,122 @@
+{
+  "dfw": {
+    "runId": "trun_9de6befd1b374fbeb4527d23515bc054",
+    "submittedAt": "2026-08-06T23:21:43.906Z"
+  },
+  "houston": {
+    "runId": "trun_9de6befd1b374fbe8515685739ac2cba",
+    "submittedAt": "2026-08-06T23:21:44.027Z"
+  },
+  "phoenix": {
+    "runId": "trun_9de6befd1b374fbea9ec3769ddd1b809",
+    "submittedAt": "2026-08-06T23:21:44.146Z"
+  },
+  "atlanta": {
+    "runId": "trun_9de6befd1b374fbe901e3f8fd36e2517",
+    "submittedAt": "2026-08-06T23:21:44.249Z"
+  },
+  "chicago": {
+    "runId": "trun_9de6befd1b374fbe901f88a2c1c2a4c0",
+    "submittedAt": "2026-08-06T23:21:44.353Z"
+  },
+  "msp": {
+    "runId": "trun_9de6befd1b374fbea500547bd01e2339",
+    "submittedAt": "2026-08-06T23:21:44.464Z"
+  },
+  "denver": {
+    "runId": "trun_9de6befd1b374fbe9bcdfe8df43b1f6b",
+    "submittedAt": "2026-08-06T23:21:44.573Z"
+  },
+  "tampa": {
+    "runId": "trun_9de6befd1b374fbeae810f4a8e8a4954",
+    "submittedAt": "2026-08-06T23:21:44.693Z"
+  },
+  "philly": {
+    "runId": "trun_9de6befd1b374fbebdf36257299ea67a",
+    "submittedAt": "2026-08-06T23:21:44.806Z"
+  },
+  "nashville": {
+    "runId": "trun_9de6befd1b374fbe9f67bf41e4cf5778",
+    "submittedAt": "2026-08-06T23:21:44.905Z"
+  },
+  "kc": {
+    "runId": "trun_9de6befd1b374fbe97715085eca46eb3",
+    "submittedAt": "2026-08-06T23:21:45.078Z"
+  },
+  "stl": {
+    "runId": "trun_9de6befd1b374fbe82e3e8b8787da1f9",
+    "submittedAt": "2026-08-06T23:21:45.182Z"
+  },
+  "detroit": {
+    "runId": "trun_9de6befd1b374fbeb9dc0ee947445b0c",
+    "submittedAt": "2026-08-06T23:21:45.305Z"
+  },
+  "boston": {
+    "runId": "trun_9de6befd1b374fbe9a95b11b43d848d9",
+    "submittedAt": "2026-08-06T23:21:45.436Z"
+  },
+  "charlotte": {
+    "runId": "trun_9de6befd1b374fbeb4495c929d685ddb",
+    "submittedAt": "2026-08-06T23:21:45.599Z"
+  },
+  "sanantonio": {
+    "runId": "trun_9de6befd1b374fbebf00744822c89531",
+    "submittedAt": "2026-08-06T23:21:45.708Z"
+  },
+  "okc": {
+    "runId": "trun_9de6befd1b374fbea503788d0eae8198",
+    "submittedAt": "2026-08-06T23:21:45.813Z"
+  },
+  "slc": {
+    "runId": "trun_9de6befd1b374fbea7afe17e518f2af3",
+    "submittedAt": "2026-08-06T23:21:45.924Z"
+  },
+  "miami": {
+    "runId": "trun_9de6befd1b374fbe9596d3b673722184",
+    "submittedAt": "2026-08-06T23:21:46.024Z"
+  },
+  "seattle": {
+    "runId": "trun_9de6befd1b374fbe95743340c60f23db",
+    "submittedAt": "2026-08-06T23:21:46.134Z"
+  },
+  "tucson": {
+    "runId": "trun_9de6befd1b374fbe9f887f8add837731",
+    "submittedAt": "2026-08-07T00:08:05.531Z"
+  },
+  "abq": {
+    "runId": "trun_9de6befd1b374fbe93582d1677af4c6a",
+    "submittedAt": "2026-08-07T00:08:05.640Z"
+  },
+  "omaha": {
+    "runId": "trun_9de6befd1b374fbe9c4901e62426078c",
+    "submittedAt": "2026-08-07T00:08:05.759Z"
+  },
+  "desmoines": {
+    "runId": "trun_9de6befd1b374fbeb963b2a8b491aa12",
+    "submittedAt": "2026-08-07T00:08:05.917Z"
+  },
+  "louisville": {
+    "runId": "trun_9de6befd1b374fbe9cd81f371c09b62e",
+    "submittedAt": "2026-08-07T00:08:06.023Z"
+  },
+  "richmond": {
+    "runId": "trun_9de6befd1b374fbea47f36b1bcbde3c1",
+    "submittedAt": "2026-08-07T00:08:06.139Z"
+  },
+  "greenville": {
+    "runId": "trun_9de6befd1b374fbeb5834126f965aed6",
+    "submittedAt": "2026-08-07T00:08:06.251Z"
+  },
+  "tulsa": {
+    "runId": "trun_9de6befd1b374fbea47c25a907669513",
+    "submittedAt": "2026-08-07T00:08:06.634Z"
+  },
+  "cosprings": {
+    "runId": "trun_9de6befd1b374fbe8169a5eb5e6a4fb9",
+    "submittedAt": "2026-08-07T00:08:06.732Z"
+  },
+  "boise": {
+    "runId": "trun_9de6befd1b374fbe93e3440cf4aaa74f",
+    "submittedAt": "2026-08-07T00:08:06.841Z"
+  }
+}

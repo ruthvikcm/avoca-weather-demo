@@ -1,0 +1,1534 @@
+{
+  "dfw": {
+    "content": {
+      "market_snapshot": "DFW is a large, still-expanding demand pool: FRED shows 8.477 million residents in 2025 versus 8.354 million in 2024 (about 1.48% growth), while NCTCOG's 2025 summary reports almost 76,000 additions in Collin County, more than 45,000 in Dallas County, and 35,746 in Tarrant County; the public excerpt did not expose Denton's number. The trade base is consolidating but remains multi-owner: SEER described Swan as its 42nd acquisition, and PitchBook data cited in 2024 reported that private-equity investors had purchased nearly 800 HVAC, plumbing, and electrical companies nationally since 2022. For an AI-CSR vendor, the practical demand drivers are population growth plus recurring cooling/heating, plumbing, and electrical repair and maintenance calls; that is an operating inference, not a published four-county market-size estimate.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Wrench Group (Leonard Green & Partners—latest disclosed statement says majority owner; TSG Consumer Partners and Oak Hill also partnered in the 2022 transaction)",
+          "type": "pe_rollup_brand",
+          "company": "Baker Brothers Plumbing, Air & Electric",
+          "note": "Wrench's established DFW flagship; acquired in February 2017, when the release cited more than 100 trucks and 200 employees."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "The SEER Group (Genstar Capital; Ares Management listed as a current investor in the 2026 profile evidence)",
+          "type": "pe_rollup_brand",
+          "company": "Swan Electric, Plumbing, Heating & Air",
+          "note": "SEER's 42nd acquisition and April 2025 Texas entry; Swan serves multiple east-Dallas/DFW communities across the three trades."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "American Residential Services / ARS (GI Partners majority owner as of March 2026)",
+          "type": "pe_rollup_brand",
+          "company": "ARS/Rescue Rooter DFW",
+          "note": "A national residential-services platform with a dedicated greater-DFW/Arlington operation, making it a natural centralized call-center/CSR target."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Neighborly (franchisor; local franchisee ownership varies; no current sponsor was stated in the cited 2025-2026 evidence)",
+          "type": "franchise",
+          "company": "Neighborly DFW franchise network: Aire Serv Dallas, Mr. Rooter Plumbing of Dallas, and Mr. Electric of Fort Worth",
+          "note": "Three locally marketed Neighborly brands cover the core trades; Neighborly reported more than $4 billion of systemwide sales in 2023."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (family-owned; no current PE sponsor disclosed in the cited source)",
+          "type": "large_independent",
+          "company": "ABC Home & Commercial Services (DFW)",
+          "note": "Family-owned since 1949 with Dallas and Fort Worth operations and a broad home-service stack; its Texas profile lists AC/heating, plumbing, and electrical."
+        },
+        {
+          "trades": "Electrical, HVAC, plumbing",
+          "parent": "independent (locally owned and family operated)",
+          "type": "large_independent",
+          "company": "Milestone Electric, A/C, & Plumbing",
+          "note": "DFW-focused all-trade operator with Dallas, Plano, Garland, and Fort Worth touchpoints; it describes itself as locally owned/family operated and voted #1 in DFW."
+        }
+      ],
+      "rollup_activity": "Consolidation is active: The SEER Group announced its 42nd acquisition, Swan, on April 23, 2025, and Paschal announced its acquisition and rebranding of JAK Services on July 22, 2025, explicitly expanding into DFW. The recent local tape also includes Chill Brothers' acquisition of Southlake-based Lee Air Services on October 10, 2023, and Air Pros USA's acquisition of Dallas Plumbing on June 23, 2022; a 2025 case summary says Air Pros entered Chapter 11, so Dallas Plumbing's post-2022 operating control should be re-verified before treating it as a current buyer."
+    },
+    "collectedAt": "2026-08-06T23:24:37.180Z",
+    "runId": "trun_9de6befd1b374fbeb4527d23515bc054"
+  },
+  "houston": {
+    "content": {
+      "market_snapshot": "The four-county Houston core sits inside a large, expanding housing market: Census reporting says Houston added approximately 43,000 residents from 2023 to 2024, while the broader Houston-The Woodlands-Sugar Land MSA permit series recorded 5,118 units in May 2026 and 4,773 in June 2026. The field is meaningfully but not fully consolidated—PE-backed platforms such as Wrench, Apex, HomeTown, Southern Home Services and GI Partners-backed ARS compete with long-established independents and local franchise brands such as One Hour/Authority Brands and Mr. Rooter/Neighborly; demand is supported by Houston's humid cooling load, ongoing new/aging-home maintenance, and hurricane/storm-surge/flood exposure.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Apex Service Partners (Alpine Investors; Apollo Funds strategic investment announced May 2026)",
+          "type": "pe_rollup_brand",
+          "company": "Air Tech of Houston",
+          "note": "Established Houston multitrade operator; Apex acquired it on 7-Feb-2020 and the brand advertises 24/7 service."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Wrench Group (Leonard Green & Partners, TSG Consumer Partners, Oak Hill Capital)",
+          "type": "pe_rollup_brand",
+          "company": "Abacus Plumbing, Air Conditioning & Electrical",
+          "note": "Wrench’s Houston operating brand; its official local page lists plumbing, air conditioning/heating, indoor air quality and electrical services."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "HomeTown Services (private-equity-backed; current sponsor not clearly disclosed in the reviewed public sources)",
+          "type": "pe_rollup_brand",
+          "company": "John Moore Services",
+          "note": "Large, highly visible Houston multitrade brand founded in 1965; HomeTown acquired it in September 2021."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "Southern Home Services (Gryphon Investors)",
+          "type": "pe_rollup_brand",
+          "company": "Nick's Plumbing & Air Conditioning",
+          "note": "Important new platform entry: Southern acquired the Houston operator in October 2025; Nick’s has served Houston since 1979."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "American Residential Services / ARS-Rescue Rooter (GI Partners majority owner; Charlesbank Capital Partners existing investor)",
+          "type": "pe_rollup_brand",
+          "company": "ARS/Rescue Rooter Houston",
+          "note": "National-scale platform with active Houston and Houston-South operations; the local branch is available seven days a week and the network covers all three target trades."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent",
+          "type": "large_independent",
+          "company": "Village Plumbing, Air & Electric",
+          "note": "Long-established Houston independent serving homeowners since 1946; its local brand explicitly markets all three trades and has a visible 56-employee LinkedIn footprint."
+        }
+      ],
+      "rollup_activity": "The clearest recent Houston-area transaction is Southern Home Services’ October 2025 acquisition of Nick’s Plumbing & Air Conditioning, expanding its Texas footprint; Southern is a Gryphon Investors-backed 15-brand residential HVAC/plumbing/electrical platform. The local consolidation trail also includes Apex’s February 2020 acquisition of Air Tech and HomeTown Services’ September 2021 acquisition of John Moore, while Apex announced an Apollo Funds/Alpine strategic investment in May 2026."
+    },
+    "collectedAt": "2026-08-06T23:24:58.977Z",
+    "runId": "trun_9de6befd1b374fbe8515685739ac2cba"
+  },
+  "phoenix": {
+    "content": {
+      "market_snapshot": "Phoenix-Mesa-Chandler is a roughly 5.19-million-person metro (ACS 2024), with Pinal County above 502,000 and growing 3.7% in the latest Arizona OEO estimate—strong territory expansion for home-service capacity. The operator set is already meaningfully consolidated across PE-backed multi-brand platforms and franchise systems, but large family-owned Chas Roberts remains; recurring desert heat, including lower-desert readings above 110°F in National Weather Service reporting, plus population growth supports year-round cooling, replacement, installation, plumbing, and electrical demand. ARS/Rescue Rooter is a major national platform (GI Partners was reported as its majority owner in March 2026), but the current sources retrieved did not unambiguously prove a Phoenix branch or a Day & Night/ARS tie, so it is not counted as a local buyer row below.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Apex Service Partners (Alpine Investors; Apollo Funds minority investment announced May 2026, expected Q4 2026 close)",
+          "type": "pe_rollup_brand",
+          "company": "ACE Home Services",
+          "note": "Phoenix-metro-facing multi-trade brand; Apex acquired ACE on 9 May 2022, giving an AI call-center vendor a direct route into a large national platform."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Wrench Group (TSG Consumer Partners, Oak Hill Capital, Leonard Green & Partners)",
+          "type": "pe_rollup_brand",
+          "company": "Parker & Sons",
+          "note": "Longstanding Phoenix anchor dating to 1974; Wrench publicly describes a 26-market, 15-state group and Parker & Sons as its Phoenix-area brand."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "Goettl Home Services (Cortec Group)",
+          "type": "pe_rollup_brand",
+          "company": "Goettl Air Conditioning & Plumbing",
+          "note": "Large multi-state platform with a substantial Phoenix footprint, 24/7 HVAC/plumbing demand, and Cortec-backed capacity for add-on growth."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Champions Group (Blackstone agreement announced February 2026; closing status not stated in the cited release)",
+          "type": "pe_rollup_brand",
+          "company": "Hobaica Services",
+          "note": "Established Phoenix multi-trade operator; Service Champions acquired Hobaica in May 2021 after its ProSkill Phoenix acquisition, and the platform later agreed to be acquired by Blackstone."
+        },
+        {
+          "trades": "HVAC",
+          "parent": "Neighborly (KKR; latest explicit ownership source found is the 2021 acquisition announcement)",
+          "type": "franchise",
+          "company": "Aire Serv of East Valley",
+          "note": "Active local franchise serving Gilbert/East Valley homeowners; Neighborly's large franchise network makes standardized booking and CSR automation particularly relevant."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "independent (company site says family-owned)",
+          "type": "large_independent",
+          "company": "Chas Roberts",
+          "note": "A major Arizona residential anchor: the company describes itself as the largest and oldest residential HVAC provider and has operated since 1942."
+        }
+      ],
+      "rollup_activity": "Phoenix-specific consolidation includes Rocket Group's announced acquisition of Veterans AC PHX in November 2025. The regional roll-up chain also includes Service Champions' May 2021 Hobaica acquisition after its December 2020 ProSkill Phoenix purchase; in February 2026 Blackstone announced an agreement to acquire Champions Group from Odyssey, while Cortec's January 2022 Goettl investment and Apex/Alpine's May 2026 Apollo minority-investment announcement show continuing platform-level capital activity."
+    },
+    "collectedAt": "2026-08-06T23:25:29.656Z",
+    "runId": "trun_9de6befd1b374fbea9ec3769ddd1b809"
+  },
+  "atlanta": {
+    "content": {
+      "market_snapshot": "The best current regional growth signal is the Atlanta Regional Commission's Atlanta-region measure (broader than the four-county cut): 5,285,474 people in April 2025, up 64,400 from April 2024. Residential service demand is structurally recurring because HVAC penetration is about 90% of U.S. homes and Georgia has meaningful cooling-degree-day exposure; PE-backed platforms now sit alongside family-owned shops, indicating active consolidation in a still-fragmented market.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Wrench Group (Leonard Green & Partners majority; TSG Consumer Partners and Oak Hill Capital minority)",
+          "type": "pe_rollup_brand",
+          "company": "Coolray Heating & Air Conditioning",
+          "note": "Atlanta-centered Wrench cluster; official brand pages link Coolray with Mr. Plumber and BriteBox Electrical, while Coolray markets all three trades across metro Atlanta."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "TurnPoint Services (OMERS Private Equity; acquired in 2020)",
+          "type": "pe_rollup_brand",
+          "company": "Cool Air Mechanical",
+          "note": "TurnPoint's continuing Atlanta-region operating brand, with heating, cooling, ventilation, water-heater and plumbing services; the parent platform also covers electrical."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "American Residential Services (GI Partners majority; Charlesbank Capital Partners and management)",
+          "type": "pe_rollup_brand",
+          "company": "ARS/Rescue Rooter Atlanta",
+          "note": "National residential platform with a Norcross location at 1465 Beaver Ruin Road; GI Partners' majority ownership was still reported in March 2026."
+        },
+        {
+          "trades": "HVAC",
+          "parent": "Neighborly (KKR; acquired in Q3 2021)",
+          "type": "franchise",
+          "company": "Aire Serv of North Atlanta",
+          "note": "Local Sandy Springs franchise with a clear North Atlanta presence; its local page positions heating and air conditioning as the specialty."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (family-owned; no PE sponsor identified in the reviewed sources)",
+          "type": "large_independent",
+          "company": "Bardi Heating, Cooling, Plumbing, Electrical",
+          "note": "Norcross-based Greater Atlanta all-trades operator; publicly presented as family-owned, BBB A+, and highly reviewed."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (family-owned; no PE sponsor identified in the reviewed sources)",
+          "type": "large_independent",
+          "company": "Estes Services",
+          "note": "Legacy Atlanta operator that marked 75 years in 2024 and serves residential and commercial customers across HVAC, plumbing and electrical."
+        }
+      ],
+      "rollup_activity": "Recent named activity includes Wrench's February 2024 acquisition of Atlanta-based Andrews, which provides HVAC, plumbing and electrical services and complements Coolray. In March 2026 Reuters reported that ARS was exploring a $3.5 billion-plus sale (GI Partners majority, Charlesbank existing investor)—a sale process rather than a completed ownership change; no verified 2025-26 Atlanta operating-brand acquisition by Apex, Leap, Sila or Horizon was found in the reviewed sources."
+    },
+    "collectedAt": "2026-08-06T23:25:29.762Z",
+    "runId": "trun_9de6befd1b374fbe901e3f8fd36e2517"
+  },
+  "chicago": {
+    "content": {
+      "market_snapshot": "Cook County alone had 2,292,484 housing units as of July 1, 2025, and Will County added 259,218, so the defined four-county territory is a very large residential-services base even before adding DuPage and Lake. Demand is strongly weather- and urgency-driven: NOAA/NWS heating and cooling degree days are explicitly tied to temperatures relative to 65°F, while local operators advertise 24/7 service and report substantial emergency-call volume. Consolidation is meaningful but incomplete: Sila added two Chicagoland operators in 2025 and Four Seasons has an active investment/acquisition program, alongside sizable privately held or employee-owned locals such as ABC and American Weathermakers.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Sila Services (Goldman Sachs Alternatives)",
+          "type": "pe_rollup_brand",
+          "company": "AA Service Company (with Ahrens & Condill and Tangney & Sons)",
+          "note": "Sila identifies AA Service Company as its lead Chicago-region brand; its August 2025 release added Ahrens & Condill and Tangney & Sons to a 35-plus-brand residential-services platform."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Cortec Group (Fund VII)",
+          "type": "pe_rollup_brand",
+          "company": "Four Seasons Heating & Air Conditioning",
+          "note": "Cortec lists the Chicago-headquartered company as Fund VII-owned and a leading Chicagoland HVAC, plumbing, and electrical provider; Four Seasons lists multiple suburban locations and trucks throughout the metro."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "American Residential Services (GI Partners majority owner; Charlesbank also invested)",
+          "type": "pe_rollup_brand",
+          "company": "ARS/Rescue Rooter Chicagoland",
+          "note": "ARS/Rescue Rooter advertises greater-Chicagoland plumbing, air-conditioning, and furnace repair, while a March 2026 Reuters report identifies GI Partners as the majority owner of the national platform."
+        },
+        {
+          "trades": "plumbing",
+          "parent": "Neighborly (KKR announced the acquisition in 2021; no later ownership change was identified in the reviewed sources)",
+          "type": "franchise",
+          "company": "Mr. Rooter Plumbing of Chicago",
+          "note": "The official location directory lists a Chicago franchise plus suburban contact locations; Neighborly's transaction release described a 4,800-plus-franchise network, making the platform a high-value CSR/software target."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent / privately held (current sponsor not publicly identified in the reviewed sources)",
+          "type": "large_independent",
+          "company": "ABC Plumbing, Sewer, Heating, Cooling & Electric",
+          "note": "A broad Chicagoland operator with plumbing, sewer, heating, cooling, and electric services and more than 70 years of local operating history."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "independent / employee-owned",
+          "type": "large_independent",
+          "company": "American Weathermakers",
+          "note": "Northbrook-based employee-owned operator serving Chicago's North Shore and northwest suburbs since 1949; it reports 70-plus years of experience, tens of thousands of completed jobs, and hundreds of emergency calls annually."
+        }
+      ],
+      "rollup_activity": "On August 4, 2025, Sila Services announced the acquisitions of Ahrens & Condill and Tangney & Sons Plumbing and Sewer in greater Chicago, adding to AA Service Company, its lead Chicago-region brand. Four Seasons says it partnered with a leading investment firm in 2022 and is actively seeking strategic acquisitions; Cortec's current portfolio page lists Four Seasons as Fund VII-owned."
+    },
+    "collectedAt": "2026-08-06T23:27:59.107Z",
+    "runId": "trun_9de6befd1b374fbe901f88a2c1c2a4c0"
+  },
+  "msp": {
+    "content": {
+      "market_snapshot": "The four specified counties total 2,714,538 residents on Minnesota's April 1, 2025 estimates (Hennepin 1,313,127; Ramsey 557,123; Dakota 462,169; Anoka 382,119); Hennepin, Dakota, and Anoka added 31,562, 22,287, and 18,232 residents respectively from 2020 to 2025, and the Metropolitan Council's latest housing-stock series describes 2024. There are visible signs of consolidation: Gridiron Capital made a growth investment in Legacy Service Partners, while Redwood reports a platform of more than 2,500 employees and $500 million in annual revenue and announced a significant Altas Partners equity investment in May 2025. Demand is year-round because official Twin Cities climate sources track both heating and cooling degree days, while the leading local operators bundle plumbing and electrical work with seasonal HVAC.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing/drains, electrical (multi-brand cluster)",
+          "parent": "Legacy Service Partners (Gridiron Capital growth investment, announced January 2023)",
+          "type": "pe_rollup_brand",
+          "company": "Blue Ox Heating & Air / Paul Bunyan Plumbing & Drains (Legacy Twin Cities cluster)",
+          "note": "Legacy's official partner directory includes Blue Ox and Paul Bunyan; its December 2025 acquisition dossier also lists HomeWorks, Comfort Matters, EarlyBird and Ouverson in Minnesota, creating dense multi-brand coverage."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical, sewer, drain",
+          "parent": "Redwood Services (Altas Partners significant equity investment, May 2025)",
+          "type": "pe_rollup_brand",
+          "company": "Dean's Home Services",
+          "note": "Redwood's May 2024 investment announcement calls Dean's a leading Twin Cities provider; Dean's reports more than 120 teammates and more than 10,000 annual customers."
+        },
+        {
+          "trades": "Plumbing",
+          "parent": "Authority Brands (franchisor)",
+          "type": "franchise",
+          "company": "Benjamin Franklin Plumbing of Minneapolis and St. Paul",
+          "note": "Authority Brands identifies itself as the parent company for Benjamin Franklin Plumbing, and the local Minneapolis page gives a franchise address in Ramsey, Minnesota."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical, drain",
+          "parent": "independent (100% family-owned; Pete Bonfe)",
+          "type": "large_independent",
+          "company": "Bonfe Plumbing, Heating, Cooling, Electrical & Sewer",
+          "note": "Bonfe is a broad multi-trade Twin Cities provider; its July 2025 owner statement says the company is 100% family-owned, making it a major non-roll-up target."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (locally owned family business)",
+          "type": "large_independent",
+          "company": "Genz-Ryan",
+          "note": "Genz-Ryan says it has provided plumbing, HVAC and electrical service in Minneapolis–St. Paul since 1950 and describes itself as a locally owned family business."
+        }
+      ],
+      "rollup_activity": "On January 18, 2023, Gridiron Capital announced a growth investment in Legacy Service Partners; Legacy's official partner directory lists Blue Ox and Paul Bunyan, and a December 6, 2025 dossier lists a Minnesota cluster including HomeWorks, Comfort Matters, EarlyBird and Ouverson. Redwood invested in Dean's Home Services in May 2024 (Dean's reports more than 120 teammates and more than 10,000 annual customers); Altas Partners announced a significant equity investment in Redwood on May 8, 2025."
+    },
+    "collectedAt": "2026-08-06T23:28:03.709Z",
+    "runId": "trun_9de6befd1b374fbea500547bd01e2339"
+  },
+  "denver": {
+    "content": {
+      "market_snapshot": "The defined four-county market is a large installed base: Denver County alone had 375,287 housing units as of July 1, 2025, while the local operator set still includes a large family-owned incumbent alongside multiple PE-backed platforms. Consolidation is active rather than complete—the national HVAC sector recorded 55 deals in 2024, up 72% from 2023, and Denver-area add-ons/entries include Swan, M&M, Tuscan and Doctor Fix-It; recurring heating/cooling needs in Colorado's cold climate, plus essential plumbing and electrical repairs, support year-round service and call volume.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Wrench Group (Leonard Green & Partners and management majority; TSG Consumer Partners and Oak Hill minority per latest located disclosure, Nov. 2022)",
+          "type": "pe_rollup_brand",
+          "company": "Plumbline Services",
+          "note": "Wrench acquired the Denver operator in May 2018; Plumbline has served Denver since 1998 and offers plumbing, HVAC and electrical services."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Champions Group Holdings (Blackstone agreed to acquire it in Feb. 2026; Odyssey Investment Partners was the prior sponsor)",
+          "type": "pe_rollup_brand",
+          "company": "Swan Heating & Air Conditioning / M&M Heating, Cooling, Plumbing & Electrical",
+          "note": "The platform has two highly relevant local brands: Swan serves the Denver/Loveland area, and M&M is a Longmont operator whose acquisition strengthened Champions' Denver footprint."
+        },
+        {
+          "trades": "Electrical, heating/HVAC, plumbing",
+          "parent": "The SEER Group (Genstar Capital and Ares Management are the latest investor relationship found)",
+          "type": "pe_rollup_brand",
+          "company": "Tuscan Electric, Heating & Plumbing",
+          "note": "SEER announced the Denver-metro acquisition on Sept. 4, 2025, making it a recent platform entry and a likely centralized-CSR buyer."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Service Experts (Brookfield Infrastructure)",
+          "type": "pe_rollup_brand",
+          "company": "Service Experts Denver",
+          "note": "The Westminster/Denver operation is part of a large national HVAC/plumbing/electrical platform reported at roughly $1 billion in revenue in 2026, making it a high-value enterprise target."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "American Residential Services / ARS (GI Partners majority owner; Charlesbank Capital Partners existing investor as of March 2026)",
+          "type": "pe_rollup_brand",
+          "company": "ARS/Rescue Rooter of Colorado",
+          "note": "ARS has a Denver operation and combines corporate scale with multi-trade residential service; Reuters reported a potential sale exploration but no completed sale in the source reviewed."
+        },
+        {
+          "trades": "Plumbing, heating/HVAC, cooling, drain cleaning, electrical",
+          "parent": "independent",
+          "type": "large_independent",
+          "company": "Applewood Plumbing Heating & Electric",
+          "note": "The company describes itself as Denver's largest family-owned home-repair company, with nearly 200 employees, more than 100 service trucks and 350,000+ customers."
+        }
+      ],
+      "rollup_activity": "Denver consolidation has included Service Champions' acquisition of Swan in August 2021 and M&M of Longmont announced in December 2022 (published in 2023), followed by The SEER Group's Tuscan acquisition on September 4, 2025. More recently, Blackstone agreed to acquire Champions from Odyssey on February 17, 2026 (expected close in the first half of 2026), and Advantage Services Group acquired Denver-area Doctor Fix-It in July 2026—an add-on whose sponsor relationship is tied to MRE Capital in the latest portfolio-company listing found."
+    },
+    "collectedAt": "2026-08-06T23:28:03.804Z",
+    "runId": "trun_9de6befd1b374fbe9bcdfe8df43b1f6b"
+  },
+  "tampa": {
+    "content": {
+      "market_snapshot": "The tri-county market has a strong growth and housing-demand signal: between 2018 and 2023 it added nearly 100,000 households but only 82,000 housing units, and the Tampa Bay Partnership says about 254,700 more units—an average of 21,225 per year—are needed by 2035. Consolidation is meaningful but not complete: PE-backed/multi-brand platforms and national franchise brands operate alongside independent multi-trade shops. Tampa's humid-subtropical climate, including a hot and humid May–October season, supports recurring cooling, replacement and maintenance demand, while ongoing household and housing additions create plumbing and electrical installation/repair demand; no reliable public metro-specific revenue/TAM figure surfaced, so household and housing metrics are the best size proxies here.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Wrench Group (Leonard Green & Partners majority; TSG Consumer Partners and Oak Hill Capital minority)",
+          "type": "pe_rollup_brand",
+          "company": "CoolToday",
+          "note": "Wrench acquired the Tampa/Sarasota heritage brand in 2019; Wrench is a multi-trade residential home-services platform and its latest 2026 ownership reporting retains the same sponsor structure."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Master Trades Group (formerly LTP Home Services Group; L Catterton)",
+          "type": "pe_rollup_brand",
+          "company": "Acree Plumbing, Air & Electric",
+          "note": "Tampa residential multi-trade operator acquired by LTP in February 2023; L Catterton currently identifies the platform as Master Trades Group (fka LTP)."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Apex Service Partners (Alpine Investors)",
+          "type": "pe_rollup_brand",
+          "company": "Frank Gay Services",
+          "note": "Alpine launched Apex with the Frank Gay acquisition in August 2025; Frank Gay's official site lists a Tampa address and all three residential trades."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "American Residential Services / ARS (GI Partners majority; Charlesbank Capital Partners investor)",
+          "type": "pe_rollup_brand",
+          "company": "ARS/Rescue Rooter Tampa Bay",
+          "note": "National multi-trade platform with a St. Petersburg branch and greater Tampa/St. Petersburg coverage; ARS's Tampa-area service territory includes Hillsborough, Pasco and Pinellas, and GI Partners is reported as majority owner in 2026."
+        },
+        {
+          "trades": "Plumbing",
+          "parent": "Neighborly (franchisor)",
+          "type": "franchise",
+          "company": "Mr. Rooter Plumbing of Tampa Bay",
+          "note": "Local 24/7 franchise operator described as locally and independently owned, serving at least Pasco and Pinellas; Neighborly identifies Mr. Rooter as its subsidiary."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent",
+          "type": "large_independent",
+          "company": "ACS Home Services",
+          "note": "Prominent Tampa multi-trade shop founded in 2014; the structured record shows it as Tampa-based and unfunded, and no PE sponsor was found in the reviewed sources."
+        }
+      ],
+      "rollup_activity": "Documented local consolidation includes Wrench's acquisition of CoolToday (March 2019), LTP's acquisition of Acree (February 2023), and Alpine's launch of Apex Service Partners with Frank Gay (August 2025). In June 2025, Air Pros founder Anthony Perera reacquired the legacy Florida operations through Exuma Capital Partners, adding another recent PE-backed ownership/platform change relevant to Tampa."
+    },
+    "collectedAt": "2026-08-06T23:28:03.878Z",
+    "runId": "trun_9de6befd1b374fbeae810f4a8e8a4954"
+  },
+  "philly": {
+    "content": {
+      "market_snapshot": "The full Philadelphia-Camden-Wilmington MSA benchmark contained 6,330,422 people in ACS 2024; the HUD Philadelphia HMA (Philadelphia and Delaware counties, a subset of the requested geography) had an estimated 2.13 million people and 901,950 households as of July 1, 2024, with households forecast to grow 0.7% annually over the next three years. The operator set is active rather than fully consolidated: Sila, Horizon/Strikepoint, Service Experts/Enercare and franchise networks coexist with strong local independents, while PitchBook data cited in 2024 put national private-equity purchases at nearly 800 HVAC, plumbing and electrical companies since 2022. Service demand is weather-sensitive and recurring: Philadelphia's ASHRAE 4A climate implies high summer cooling and significant winter heating demand, while 24/7 repair, replacement, plumbing/electrical, water-heater and home-performance offerings create ongoing CSR/call volume.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical; water treatment, indoor air quality and home performance",
+          "parent": "Goldman Sachs Alternatives (Private Equity at Goldman Sachs Asset Management)",
+          "type": "pe_rollup_brand",
+          "company": "Sila Services / Sila Philadelphia",
+          "note": "King of Prussia-headquartered platform serving the Northeast, Mid-Atlantic and Midwest; its current site identifies it as a Goldman Sachs Alternatives portfolio company, following the 2024 majority-investment announcement."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical and water treatment",
+          "parent": "Strikepoint Group Holdings (current platform; current sponsor not publicly identified in the reviewed sources)",
+          "type": "pe_rollup_brand",
+          "company": "Horizon Services",
+          "note": "A current Strikepoint family brand with local markets including Audubon, PA and Mount Laurel, NJ; Horizon also describes coverage across southeastern Pennsylvania and southern New Jersey and calls itself one of the largest home-services companies in the United States."
+        },
+        {
+          "trades": "HVAC, plumbing and electrical nationally; Philadelphia page emphasizes HVAC and plumbing",
+          "parent": "Enercare (Brookfield Infrastructure; no newer ownership change found in the reviewed sources)",
+          "type": "pe_rollup_brand",
+          "company": "Service Experts Philadelphia (formerly Stallion / Wesley Wood)",
+          "note": "National platform with a current Greater Philadelphia operation; the local page identifies the former Wesley Wood brand, and Service Experts announced its acquisition of Philadelphia-based Stallion in 2022."
+        },
+        {
+          "trades": "HVAC",
+          "parent": "Authority Brands (franchisor; local Bucks County franchisee)",
+          "type": "franchise",
+          "company": "One Hour Heating & Air Conditioning — Levittown/Bucks County",
+          "note": "The official local page says Levittown technicians provide 24/7 AC and heating repair, installation and maintenance throughout Bucks County; Authority Brands' own case study lists One Hour with its Mister Sparky and Benjamin Franklin Plumbing brands."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical; indoor air quality, generators and water/sewer lines",
+          "parent": "independent (second-generation, privately held)",
+          "type": "large_independent",
+          "company": "Oliver Heating & Cooling",
+          "note": "A major Delaware Valley operator based in Morton since 1971, with a second-generation owner and a full multi-trade offering across Delaware Valley and Southeastern Pennsylvania."
+        },
+        {
+          "trades": "Plumbing, HVAC and electrical; excavation",
+          "parent": "independent",
+          "type": "large_independent",
+          "company": "McClain Bros.",
+          "note": "Locally owned and operated since 1995, based in Levittown, available 24/7 and explicitly serving Philadelphia, Bucks and Montgomery counties with all three target trades."
+        }
+      ],
+      "rollup_activity": "In the target market, Service Experts announced on September 9, 2022 that it had acquired substantially all assets of Philadelphia-based Stallion Heating, Plumbing & Air Conditioning; its current Philadelphia page identifies the operation as formerly Wesley Wood Service Experts. Regional platform-building continued at Sila with the Triangle Heating, Cooling, Plumbing & Electrical acquisition in Central Pennsylvania (November 30, 2023), the Gary & Sons acquisition in Pennsylvania (July 3, 2024), and Goldman Sachs' announced majority investment in Sila (November 12, 2024); the Sila tuck-ins are Pennsylvania-region signals and are not all inside the five counties plus Camden."
+    },
+    "collectedAt": "2026-08-06T23:28:03.945Z",
+    "runId": "trun_9de6befd1b374fbebdf36257299ea67a"
+  },
+  "nashville": {
+    "content": {
+      "market_snapshot": "The four-county core sits in a fast-growing Nashville market: the MSA added 86 people per day in 2023, and Davidson, Rutherford, Williamson and Wilson were all among the six Tennessee counties with the largest population gains from 2021 to 2023; Davidson added 10,413 residents in 2024, while Rutherford and Wilson added 7,347 and 5,596. Nashville-Davidson's 2020-2024 owner-occupied rate was 52.4% and the median value of owner-occupied homes was $413,600; combined with Nashville's humid-subtropical climate, that supports recurring HVAC/heating, indoor-air-quality, plumbing and electrical repair/replacement demand. The provider set is consolidating but remains mixed rather than dominated by one platform: PE-backed roll-ups, franchise networks and substantial family-owned independents coexist.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Wrench Group (PE-backed; Nov. 2022 recapitalization: Leonard Green & Partners/management retained majority; TSG Consumer Partners and Oak Hill Capital invested)",
+          "type": "pe_rollup_brand",
+          "company": "Coolray (Nashville)",
+          "note": "Coolray is a Wrench Group company, opened its first Nashville location in November 2022, and Wrench's current site reports 26 markets across 15 states; the latest sponsor disclosure reviewed is the 2022 recapitalization."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "American Residential Services / ARS (GI Partners; current lead investor)",
+          "type": "pe_rollup_brand",
+          "company": "ARS/Rescue Rooter Nashville",
+          "note": "The greater-Nashville operation provides HVAC and plumbing locally, while ARS's network covers electrical as well; ARS is one of the nation's largest residential HVAC/plumbing providers and GI Partners is identified as current lead investor."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Concentric Equity Partners (controlling equity at Leap Partners' 2022 formation; no later sponsor change located)",
+          "type": "pe_rollup_brand",
+          "company": "Leap Partners (Nashville-based platform)",
+          "note": "A platform-level AI/CSR target: Leap connects a 14-company HVAC/plumbing/electrical portfolio across six states and announced 34 Tennessee/West Virginia acquisitions by July 2026; public sources reviewed do not name a specific Davidson/Rutherford/Williamson/Wilson operating brand."
+        },
+        {
+          "trades": "HVAC; electrical through a local sister brand",
+          "parent": "Neighborly (franchisor; KKR acquisition announced in 2021; current sponsor not re-disclosed in the current local pages)",
+          "type": "franchise",
+          "company": "Aire Serv of Nashville (with Mr. Electric of Central Nashville)",
+          "note": "Aire Serv is a leading local HVAC repair/maintenance provider, while Mr. Electric supplies local electrical coverage; franchise locations are independently owned and operated, making the network a relevant multi-brand CSR buyer."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical, appliance repair, facility services",
+          "parent": "independent / Lee family (family-owned)",
+          "type": "large_independent",
+          "company": "Lee Company",
+          "note": "A major regional independent: it serves four states from 15 locations, offers all three core trades plus adjacent services, and has a dedicated Nashville operation."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent / Hiller family (family-owned; no PE parent stated in the current home-services source)",
+          "type": "large_independent",
+          "company": "Hiller Plumbing, Heating, Cooling & Electrical",
+          "note": "Family-owned and operated since 1990, with a Nashville branch and a service fleet the company describes as the largest in Davidson County; its local page covers plumbing, heating/AC and electrical services."
+        }
+      ],
+      "rollup_activity": "Coolray/Wrench Group opened Coolray's first Nashville location in early November 2022; Wrench's November 2022 recapitalization added TSG Consumer Partners and Oak Hill Capital while Leonard Green & Partners and management retained majority control. Leap Partners was formed with controlling equity from Concentric Equity Partners on March 24, 2022, and its July 2026 announcement said it had acquired 34 HVAC, plumbing and electrical companies across Tennessee and West Virginia, although the public announcement does not identify how many are in the four-county core."
+    },
+    "collectedAt": "2026-08-06T23:28:04.024Z",
+    "runId": "trun_9de6befd1b374fbe9f67bf41e4cf5778"
+  },
+  "kc": {
+    "content": {
+      "market_snapshot": "HUD’s broader Kansas City HMA (report as of January 1, 2024; not a five-county-only forecast) projected demand for 16,200 rental units and 16,050 sales units from January 2024 through January 2027, with 7,925 rental units and 2,170 homes under construction at the report date—a strong growth signal for the residential service base. The operator set is mixed rather than fully consolidated: family-owned independents such as LBA and Anthony sit alongside Apex/Southern Home Services roll-up brands and Neighborly franchisees, while the A.B. May/Frontier-to-Apex and Mission/Ultra transactions show active consolidation. Service demand is driven by seasonal heating/cooling and 24/7 emergency repair/replacement, plumbing/sewer/drain work, and electrical/IAQ upgrades; an exact five-county market-size/share figure and the legal names of local franchise owners were not established in the reviewed sources.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, drains/sewer, electrical",
+          "parent": "Apex Service Partners (Alpine Investors; Apollo Funds definitive minority-interest agreement announced May 2026, expected to close Q4 2026)",
+          "type": "pe_rollup_brand",
+          "company": "A.B. May Heating, A/C, Plumbing & Electrical",
+          "note": "Long-running Kansas City multi-trade brand with a 50-mile service radius; Frontier Service Partners’ sale put it into Apex in January 2024."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "Southern Home Services (majority-owned by Gryphon Investors per the October 2021 announcement)",
+          "type": "pe_rollup_brand",
+          "company": "Mission Plumbing, Heating & Cooling",
+          "note": "Greater-Kansas-City operator; Southern Home Services acquired it in 2021 and Mission acquired Ultra Heating & Cooling effective April 7, 2025."
+        },
+        {
+          "trades": "Plumbing, sewer/drain",
+          "parent": "Neighborly (franchisor)",
+          "type": "franchise",
+          "company": "Mr. Rooter Plumbing of Kansas City",
+          "note": "Locally owned and independently operated franchise with multi-city Kansas City coverage and emergency plumbing/sewer services."
+        },
+        {
+          "trades": "HVAC, indoor air quality",
+          "parent": "Neighborly (franchisor)",
+          "type": "franchise",
+          "company": "Aire Serv of Kansas City South",
+          "note": "Locally owned and independently operated HVAC franchise serving Kansas City South and nearby Jackson County communities."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Independent / family-owned; no PE parent identified in reviewed sources",
+          "type": "large_independent",
+          "company": "LBA Services",
+          "note": "Founded in 1985, family-owned and operated, with Kansas City-area locations and a broad metro service-area list."
+        },
+        {
+          "trades": "Plumbing, HVAC, electrical",
+          "parent": "Independent / local proprietor; no PE parent identified in reviewed sources",
+          "type": "large_independent",
+          "company": "Anthony Plumbing, Heating, Cooling & Electric",
+          "note": "Founded in 1951; the company reports more than 300 workers and three locations in Lenexa, Independence, and North Kansas City."
+        }
+      ],
+      "rollup_activity": "On January 23, 2024, Apex Service Partners closed its purchase of Frontier Service Partners, whose Midwest platform included Kansas City’s A.B. May. On April 7, 2025, Mission Plumbing, Heating & Cooling—already acquired by Southern Home Services in April 2021—acquired Ultra Heating & Cooling in the Kansas City market; Southern Home Services’ majority ownership by Gryphon Investors was announced in October 2021."
+    },
+    "collectedAt": "2026-08-06T23:28:04.139Z",
+    "runId": "trun_9de6befd1b374fbe97715085eca46eb3"
+  },
+  "stl": {
+    "content": {
+      "market_snapshot": "The broader St. Louis MO-IL metro—used as a size proxy because it is not identical to the specified five-county core—had 2,809,527 residents in the 2024 ACS profile; St. Louis City's building-permit dashboard reported 4,073 permits in 2024 across commercial, industrial and residential categories, providing a current activity signal. Consolidation is meaningful but incomplete: Apex and Neighborly bring platform/franchise scale, while Hoffmann Brothers, Jerry Kelly and Scott-Lee remain local founder/family-led buying centers. Demand is weather-driven and recurring: the National Weather Service tracks both heating-degree days and cooling-degree days for St. Louis, while an aging U.S. housing stock—over 40% of occupied homes built before 1970—supports ongoing repair, replacement and maintenance demand (the housing-age statistic is national, not St. Louis-specific).",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Apex Service Partners (Alpine Investors; Apollo Funds strategic minority investor announced May 2026)",
+          "type": "pe_rollup_brand",
+          "company": "Academy Air",
+          "note": "Apex acquired/invested in the St. Louis brand in July 2020; it is a direct local entry point into a national multi-trade roll-up whose current investor stack includes Alpine and Apollo."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "HB Solutions Group / Deutschmann Lane Holdings (founder-led; no PE sponsor identified in the reviewed sources)",
+          "type": "large_independent",
+          "company": "Hoffmann Brothers",
+          "note": "A prominent St. Louis-based multi-trade operator serving St. Louis and Nashville; HB Solutions operates the Hoffmann Bros. brands and was consolidating them at an Earth City campus in 2026."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Neighborly (KKR; local locations independently owned and operated)",
+          "type": "franchise",
+          "company": "Neighborly of St. Louis (Mr. Electric / Mr. Rooter / Aire Serv)",
+          "note": "The local Fenton/Kirkwood network combines identifiable electrical, plumbing and HVAC franchise demand with a national multi-brand franchisor and independently owned local units."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent",
+          "type": "large_independent",
+          "company": "Jerry Kelly Heating, Air Conditioning, Plumbing & Electrical",
+          "note": "Its site explicitly covers Greater St. Peters, St. Louis County and St. Charles County across cooling/heating, plumbing/drains and electrical; co-owner Steve Miles is publicly identified."
+        },
+        {
+          "trades": "HVAC",
+          "parent": "independent",
+          "type": "large_independent",
+          "company": "Scott-Lee Heating Company",
+          "note": "A long-standing greater-St. Louis HVAC operator that remained family-owned and operated in the July 2025 local profile; Terrance Scott and Russ Scott are identified as owners."
+        },
+        {
+          "trades": "Electrical",
+          "parent": "Authority Brands (franchisor)",
+          "type": "franchise",
+          "company": "Mister Sparky of Southwest St. Louis",
+          "note": "A current local franchise providing residential wiring/electrical work in Southwest St. Louis, backed by the Authority Brands family that also includes One Hour and Mister Sparky."
+        }
+      ],
+      "rollup_activity": "The clearest locally documented residential-trades platform activity was in 2022: Heartland Home Services announced its acquisition of Faszold Heating & Cooling in St. Louis in March, and Royal House Partners added Sinak Plumbing, based in St. Louis, in September. Apex's Academy Air transaction dates to July 2020; more recently, HB Solutions' January 2026 Earth City move consolidated Hoffmann Bros. and its 2023-acquired Ferguson Roofing, although Ferguson is roofing rather than one of the three focal trades."
+    },
+    "collectedAt": "2026-08-06T23:28:04.227Z",
+    "runId": "trun_9de6befd1b374fbe82e3e8b8787da1f9"
+  },
+  "detroit": {
+    "content": {
+      "market_snapshot": "A Census Reporter profile lists 4,400,578 people for the broader Detroit-Warren-Dearborn metro, while Detroit-specific housing research says old housing stock, high poverty, and an aging population intensify home-repair demand. The evidence shows a mix of local operators and franchisees overlaid by PE roll-ups and national franchisors; as a sector-wide signal, PitchBook reported a record 55 HVAC PE deals in 2024, up 72% from 2023, and Heartland describes residential HVAC, plumbing, and electrical services as non-discretionary demand.",
+      "buyers": [
+        {
+          "trades": "HVAC, electrical",
+          "parent": "Heartland Home Services (TJC sponsor; Cobepa minority; latest explicit ownership evidence December 2020, with TJC portfolio status Current)",
+          "type": "pe_rollup_brand",
+          "company": "Randazzo Heating, Cooling & Electrical",
+          "note": "Macomb-based local platform brand serving Southeast Michigan/Metro Detroit; Heartland lists it as Michigan's largest award-winning heating-and-cooling company, making it a logical multi-location call-center/CSR target."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Heartland Home Services (TJC sponsor; Cobepa minority; latest explicit ownership evidence December 2020, with TJC portfolio status Current)",
+          "type": "pe_rollup_brand",
+          "company": "FLAME Heating, Cooling, Plumbing & Electrical",
+          "note": "Warren-based multi-trade brand with explicit Macomb, Oakland, and Wayne coverage and a 1949 local legacy; it provides a broad tri-county operating footprint within the Heartland platform."
+        },
+        {
+          "trades": "Plumbing",
+          "parent": "Neighborly (KKR; latest official confirmation says acquired in Q3 2021; later ownership change not separately confirmed in reviewed sources)",
+          "type": "franchise",
+          "company": "Mr. Rooter Plumbing of Detroit",
+          "note": "The local franchise explicitly serves Macomb, Oakland, and Wayne counties and is part of Neighborly, making it a logical franchise-system call-center/CSR target."
+        },
+        {
+          "trades": "HVAC",
+          "parent": "Authority Brands (Apax Partners; Apax portfolio page lists the relationship as Current)",
+          "type": "franchise",
+          "company": "One Hour Heating & Air Conditioning of Southfield",
+          "note": "Authority Brands' Michigan page lists a Southfield location and a Canton/Novi operation at a Livonia address, placing the network in Oakland and Wayne County parts of the target metro."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "independent (family-owned)",
+          "type": "large_independent",
+          "company": "Kotz Heating, Cooling & Plumbing",
+          "note": "A since-1929 Waterford/Oakland County operator serving Waterford, Birmingham, Clarkston, Royal Oak, Walled Lake, and surrounding communities; no roll-up parent was identified in the sourced material."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (family-owned and operated)",
+          "type": "large_independent",
+          "company": "Home Service Corp.",
+          "note": "Melvindale-based since 1980, with more than 20 employees, thousands of Southeast Michigan homes served, and explicit HVAC/plumbing/electrical coverage; its breadth makes it a logical independent target."
+        }
+      ],
+      "rollup_activity": "Heartland Home Services acquired Ferndale-based Air Master Heating & Air Conditioning in June 2022, explicitly saying the deal gave it more bandwidth to serve Detroit; its current roster also includes Macomb-based Randazzo and Warren-based Flame. I did not find an authoritative 2025-26 announcement of a newer tri-county residential add-on, so Atrium/Great Dane and ARS/Andy's Statewide associations are left out rather than treated as confirmed local roll-up activity."
+    },
+    "collectedAt": "2026-08-06T23:28:04.311Z",
+    "runId": "trun_9de6befd1b374fbeb9dc0ee947445b0c"
+  },
+  "boston": {
+    "content": {
+      "market_snapshot": "The wider Boston-Cambridge-Newton metro had about 5.03 million residents in 2024; 2024 estimates also reported net gains of 24,024 in Middlesex, 11,466 in Suffolk, and 8,375 in Norfolk, signaling a large and still-growing catchment even though the requested four counties are narrower than the full MSA. Demand is heating-led and increasingly tied to equipment replacement, emergency plumbing/electrical work, and electrification: NEEP's regional target calls for heat pumps to reach at least 65% of residential-scale heating, air-conditioning, and water-heating shipments by 2030. The market is fragmented but consolidating—Sila, Flint, ARS and Neighborly give PE/franchise platforms local footholds while long-lived owner-led firms such as Rodenhiser and Papalia remain visible competitors.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Sila Services (Goldman Sachs Alternatives; announced majority-stake acquisition from Morgan Stanley Capital Partners in Nov. 2024)",
+          "type": "pe_rollup_brand",
+          "company": "Boston Standard Company / New England Ductless (Sila)",
+          "note": "Sila acquired the two Boston-area brands in January 2022 and now markets multi-trade service across Boston, making this the clearest local PE-platform target."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical (plus drains/sewer)",
+          "parent": "Flint Group (General Atlantic strategic investment; Skylight Capital lists Cranney as an active investment)",
+          "type": "pe_rollup_brand",
+          "company": "Cranney Home Services",
+          "note": "Danvers/North Shore operator acquired by Flint in January 2021; Flint identifies Boston as one of its primary platform markets."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "American Residential Services / ARS (GI Partners majority owner; Charlesbank Capital Partners existing investor)",
+          "type": "pe_rollup_brand",
+          "company": "ARS/Rescue Rooter Boston",
+          "note": "Company-operated Stoughton location serves the Boston area, while ARS is a national multi-branch residential-services platform with current GI/Charlesbank backing."
+        },
+        {
+          "trades": "Electrical",
+          "parent": "Neighborly (KKR is the latest disclosed buyer; local franchise is independently owned)",
+          "type": "franchise",
+          "company": "Mr. Electric of Boston South Metro",
+          "note": "Stoughton franchise gives Neighborly an in-county electrical foothold and a branded, independently operated service organization."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (Andy Rodenhiser-led)",
+          "type": "large_independent",
+          "company": "Rodenhiser Plumbing, Heating, AC & Electric",
+          "note": "Long-established local operator covering the Route 495/128 area; its site claims 97+ years and 14,000+ five-star reviews."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (Jim Papalia-founded)",
+          "type": "large_independent",
+          "company": "Papalia Home Services",
+          "note": "Boxborough/MetroWest operator founded in 1990 with dedicated HVAC, plumbing and electrical lines, plus 24/7 live answering."
+        }
+      ],
+      "rollup_activity": "The most directly Boston-area platform add-ons were Flint Group's acquisition of Danvers/North Shore Cranney Home Services (Jan. 6, 2021), Sila Services' acquisition of Boston Standard Company and New England Ductless (Jan. 26, 2022), and Cox Engineering's acquisition of Weymouth-based US Air (May 2022). Capital kept moving: Flint announced a strategic investment from General Atlantic in Aug. 2023, Boston Unique Indoor Comfort announced an Ace Hardware acquisition on Feb. 1, 2024, and Sila announced a majority-stake transaction with Goldman Sachs Alternatives from Morgan Stanley Capital Partners in Nov. 2024; the public releases do not all state final closing/ownership details."
+    },
+    "collectedAt": "2026-08-06T23:28:04.389Z",
+    "runId": "trun_9de6befd1b374fbe9a95b11b43d848d9"
+  },
+  "charlotte": {
+    "content": {
+      "market_snapshot": "The broader Charlotte-Concord-Gastonia MSA population series reports 2,884.708 in 2024 versus 2,818.271 in 2023, while the Charlotte Region gained 57,300 residents through migration from July 1, 2023 to July 1, 2024—strong growth signals for residential service demand, although the MSA is broader than the requested five-county target. The operator mix indicates partial consolidation—PE/franchise platforms coexist with family-owned locals—and Greater Charlotte permit reporting covers Cabarrus, Gaston, Mecklenburg and Union but not York in the retrieved source; Charlotte's climate is described as heat-pump-friendly with cool, not extreme winters, supporting recurring HVAC repair/replacement alongside plumbing and electrical work.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "Wrench Group (Leonard Green & Partners)",
+          "type": "pe_rollup_brand",
+          "company": "Morris-Jenkins",
+          "note": "Wrench's Charlotte entry; the deal source describes Morris-Jenkins as the region's largest HVAC/plumbing provider, making it a high-priority platform target."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Trilantic North America (invested 2021)",
+          "type": "pe_rollup_brand",
+          "company": "Strada Services",
+          "note": "A residential Southeast installation/services platform with a Charlotte page covering air conditioning, plumbing and electrical work."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "American Residential Services (Charlesbank Capital Partners)",
+          "type": "pe_rollup_brand",
+          "company": "Brothers Air, Heat & Plumbing (ARS/Rescue Rooter)",
+          "note": "The local ARS operating brand has served greater Charlotte since 1985, combining local tenure with a large multi-trade platform."
+        },
+        {
+          "trades": "HVAC",
+          "parent": "Authority Brands (franchisor)",
+          "type": "franchise",
+          "company": "One Hour Heating & Air Conditioning of Charlotte",
+          "note": "The Charlotte franchise has provided HVAC replacement and repair since 1971; Authority Brands added One Hour to its franchise portfolio in 2019."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent",
+          "type": "large_independent",
+          "company": "Roby Services",
+          "note": "Family-owned, three generations since 1950, with all three residential trades and a long-standing Charlotte footprint."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent",
+          "type": "large_independent",
+          "company": "Horne Heating and Air Conditioning",
+          "note": "A Charlotte family-owned operator with over 40 years of ownership and explicit HVAC, plumbing and electrical coverage."
+        }
+      ],
+      "rollup_activity": "Wrench Group's October 21, 2021 partnership/acquisition of Morris-Jenkins expanded Wrench into the Carolinas; the deal source identifies Morris-Jenkins as the Charlotte region's largest HVAC/plumbing provider. On May 19, 2022, Strikepoint Group Holdings announced the acquisition of Phillips Air Care's North Charlotte location, while Strada's residential Southeast platform was sold to Trilantic North America in December 2021 (Trilantic lists the investment as 2021)."
+    },
+    "collectedAt": "2026-08-06T23:28:04.467Z",
+    "runId": "trun_9de6befd1b374fbeb4495c929d685ddb"
+  },
+  "sanantonio": {
+    "content": {
+      "market_snapshot": "Within the defined footprint, Bexar County's July 2025 population estimate was 2,160,088, while Comal County grew 27.8% from 163,608 in 2020 to 209,166 in 2025; as a broader metro proxy, the San Antonio-New Braunfels MSA series reached 2,813.140 thousand residents in 2025 versus 2,605.822 thousand in 2021. The trade base remains fragmented even as PE platforms and franchisors consolidate contractors; rapid population growth and recurring extreme heat—with local forecasts reaching 102°F and heat-index values above 105°F—support HVAC replacement/repair and adjacent plumbing/electrical demand.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "Wrench Group (Leonard Green & Partners/management majority; TSG Consumer Partners and Oak Hill investment announced in 2022; Goettl-to-Wrench linkage should be rechecked)",
+          "type": "pe_rollup_brand",
+          "company": "Goettl Air Conditioning & Plumbing — San Antonio",
+          "note": "The official local page gives a San Antonio address and 24/7 HVAC/plumbing service; Wrench's sponsor trail makes it a high-priority platform target, but the retrieved Goettl page does not itself name the parent."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "T3 Services Group / Riverside Company (Riverside acquired Radiant in May 2021)",
+          "type": "pe_rollup_brand",
+          "company": "Radiant Plumbing & Air Conditioning — San Antonio",
+          "note": "Radiant advertises South Texas HVAC, plumbing and electrical service, and the T3/Riverside trail identifies a platform entry into San Antonio."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "American Residential Services / ARS-Rescue Rooter (GI Partners made a majority investment in 2020; Charlesbank is the historical sponsor reference)",
+          "type": "pe_rollup_brand",
+          "company": "Will Fix It",
+          "note": "ARS's San Antonio location lists air conditioning, heating, plumbing, drain cleaning, insulation and electrical under the Will Fix It brand, making it a scaled multi-trade call-center target."
+        },
+        {
+          "trades": "plumbing",
+          "parent": "Neighborly (KKR agreed to acquire the franchisor in July 2021; a later 2025-26 ownership change was not publicly confirmed in the retrieved sources)",
+          "type": "franchise",
+          "company": "Mr. Rooter Plumbing of West San Antonio – Alamo Ranch",
+          "note": "The local Mr. Rooter page confirms a West San Antonio/Alamo Ranch operation; Aire Serv of Stone Oak is an additional local Neighborly HVAC franchise, so the network is relevant even though individual franchisee scale is not disclosed."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent / Don Rackler identified as founder; no PE parent publicly confirmed in the retrieved sources",
+          "type": "large_independent",
+          "company": "Jon Wayne Service Company",
+          "note": "Company and workforce profiles describe it as San Antonio's largest residential heating, air-conditioning, plumbing and electrical contractor, with a broad local service footprint."
+        },
+        {
+          "trades": "HVAC, plumbing; electrical not explicitly confirmed in the retrieved sources",
+          "parent": "independent, family-owned; led by owner Bobby Jenkins",
+          "type": "large_independent",
+          "company": "ABC Home & Commercial Services — San Antonio",
+          "note": "ABC is a long-running Texas family platform with a San Antonio branch and 24/7 heating service; the retrieved sources identify family ownership rather than a PE sponsor."
+        }
+      ],
+      "rollup_activity": "On July 5, 2023, P3 Services announced its acquisition of San Antonio-based Anchor Plumbing; the announcement described P3 as a Stellex Capital Management platform investment and the transaction as P3's second acquisition of 2023. Earlier, Riverside acquired Radiant in May 2021, and a later T3 description says that platform acquisition established a San Antonio presence; no primary-source 2025-26 San Antonio transaction was found in the retrieved material."
+    },
+    "collectedAt": "2026-08-06T23:28:04.551Z",
+    "runId": "trun_9de6befd1b374fbebf00744822c89531"
+  },
+  "okc": {
+    "content": {
+      "market_snapshot": "The Greater Oklahoma City metro is about 1.49 million people and was reported up 19% from 2010, providing a meaningful growth runway for residential service and replacement demand. The reviewed buyer set is mixed rather than fully consolidated: PE-backed platforms and franchisors are adding local capacity while long-established family-owned independents remain prominent. Hot summers and severe-weather exposure are practical demand drivers—heating/cooling degree days are energy-demand measures, and local weather sources highlight extreme heat plus damaging wind and hail—supporting HVAC load, storm repairs, and cross-trade plumbing/electrical calls.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Apex Service Partners (Alpine Investors; Apollo Funds announced a strategic minority investment in May 2026)",
+          "type": "pe_rollup_brand",
+          "company": "Air Comfort Solutions OKC",
+          "note": "Serves the Oklahoma City and Tulsa metros across all three trades; Air Comfort Solutions is documented as acquired by Apex, making it a direct Apex platform target in the metro."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "Turnpoint Services (OMERS Private Equity; acquired from Trivest in 2025)",
+          "type": "pe_rollup_brand",
+          "company": "Suntech Heat, Air and Plumbing",
+          "note": "Edmond-based local brand serving the Oklahoma City metro since 1986; its long tenure and Turnpoint platform affiliation make it a high-value CSR/call-center prospect."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Wrench Group, LLC (Leonard Green & Partners)",
+          "type": "pe_rollup_brand",
+          "company": "Comfort Wave Home Services",
+          "note": "Wrench's greenfield OKC entry opened in November 2023; Comfort Wave covers all three trades and planned 100 new local jobs in its first 15 months."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Independent/operator-owned Paschal Air, Plumbing & Electric",
+          "type": "large_independent",
+          "company": "Paschal Air, Plumbing & Electric (formerly Patriot Heat & Air in OKC)",
+          "note": "Paschal has an Oklahoma City-area operation and acquired Oklahoma City-based Patriot Heat & Air in September 2024, adding a recent acquisition-led local platform with all-three-trade coverage."
+        },
+        {
+          "trades": "Plumbing",
+          "parent": "Neighborly (KKR; 2021 acquisition, with no subsequent sale identified in the reviewed sources)",
+          "type": "franchise",
+          "company": "Mr. Rooter Plumbing of Oklahoma City",
+          "note": "Dedicated local Neighborly plumbing operator at 8132 West Reno Avenue; it combines a concrete OKC service footprint with the scale and centralized marketing of a national franchise system."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (family-owned)",
+          "type": "large_independent",
+          "company": "Drabek & Hill",
+          "note": "One of Oklahoma's oldest and largest family-owned HVAC, plumbing and electrical contractors, serving the Oklahoma City metro since 1961."
+        }
+      ],
+      "rollup_activity": "Paschal Air, Plumbing & Electric acquired Oklahoma City-based Patriot Heat & Air on September 5, 2024, while Wrench Group launched Comfort Wave's first Oklahoma City location in November 2023 with a plan for 100 new jobs in its first 15 months. At the platform level, Trivest sold Turnpoint Services to OMERS Private Equity in 2025, changing the sponsor behind local Suntech."
+    },
+    "collectedAt": "2026-08-06T23:28:04.664Z",
+    "runId": "trun_9de6befd1b374fbea503788d0eae8198"
+  },
+  "slc": {
+    "content": {
+      "market_snapshot": "The four-county catchment is a large Wasatch Front residential market with ongoing housing demand: the Weber-Davis multi-county area alone reached 647,197 residents in 2023 (18.7% of Utah), while a July 2025 housing report listed 4,093 units for Salt Lake County even as Utah residential construction declined in 2024. Consolidation is already meaningful—ARS combined five Salt Lake-area companies into Yes! in June 2023, and Knox Lane-backed Any Hour Group reports 21 brands in more than 29 locations, alongside Bestige/Intermountain and Apex/Whipple. Service demand is recurring and seasonal: heating and cooling degree days are standard measures of building heating/cooling needs, and the expanding housing base creates continuing repair, replacement, plumbing, and electrical workloads; the last clause is market synthesis rather than a published metro revenue estimate.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical, insulation",
+          "parent": "American Residential Services / ARS Rescue Rooter (GI Partners; majority owner reported in March 2026)",
+          "type": "pe_rollup_brand",
+          "company": "Yes! Heating, Air Conditioning, Plumbing & Electric",
+          "note": "ARS merged five Salt Lake-area companies into the Yes! brand in June 2023; the announcement described 250+ employees and all core residential trades."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical, drain",
+          "parent": "Any Hour Group (Knox Lane)",
+          "type": "pe_rollup_brand",
+          "company": "Black Diamond Experts",
+          "note": "A prominent multi-trade Salt Lake/Ogden operator; Any Hour Group is Knox Lane-backed with 21 brands across 29+ locations, and Black Diamond joined the group in July 2023."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Apex Service Partners (Alpine Investors; Apollo Funds minority investment announced May 2026)",
+          "type": "pe_rollup_brand",
+          "company": "Whipple Service Champions",
+          "note": "Salt Lake service brand operating since 1947; PitchBook reports Apex acquired Whipple on July 29, 2021, making it a clear Apex platform target."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical, water treatment",
+          "parent": "Bestige Holdings (Intermountain Home Services is listed as a current investment)",
+          "type": "pe_rollup_brand",
+          "company": "Intermountain Home Services (local brands include Superior Water & Air, Beehive, and SameDay)",
+          "note": "Salt Lake-based multi-brand platform trusted by 350,000+ homeowners in Utah and Idaho; its site explicitly describes disciplined acquisitions and broad core-trade coverage."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical, generators",
+          "parent": "independent (the company describes itself as locally owned/operated; no PE parent was identified in the reviewed sources)",
+          "type": "large_independent",
+          "company": "Mountain Home Services",
+          "note": "Long-running Northern Utah multi-trade operator serving Greater Salt Lake City since 1954; the reviewed sources did not publish employee or revenue scale, so it is a large-independent target candidate rather than a verified size ranking."
+        }
+      ],
+      "rollup_activity": "In June 2023, ARS/Rescue Rooter consolidated ARS/Rescue Rooter, ESCO, Absolute Air, Captain Electric, and OyBoy Heating and Cooling into Yes! in the greater Salt Lake City area, with 250+ employees reported. In July 2023 Any Hour (Knox Lane) joined forces with Black Diamond, and in November 2025 Any Hour Group acquired Lee's Plumbing in northern Utah—evidence of continuing local and regional roll-up activity."
+    },
+    "collectedAt": "2026-08-06T23:28:04.745Z",
+    "runId": "trun_9de6befd1b374fbea7afe17e518f2af3"
+  },
+  "miami": {
+    "content": {
+      "market_snapshot": "Miami-Dade, Broward, and Palm Beach comprise a roughly 6.14-million-person three-county market on the 2020 population figure returned by the research (6,138,333); the evidence gathered did not provide a clean, comparable 2025 three-county total. Consolidation is material: PitchBook data cited in October 2024 put private-equity purchases of HVAC, plumbing, and electrical companies at nearly 800 since 2022. The demand thesis is partly an operating inference rather than a Miami-specific revenue statistic: South Florida's heat and humidity make cooling a recurring need, while storm/flood exposure, a large existing housing base, and multi-trade service calls support plumbing and electrical demand; local operators explicitly market these combined services.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "Wrench Group",
+          "type": "pe_rollup_brand",
+          "company": "Lindstrom Air Conditioning & Plumbing",
+          "note": "Wrench Group's February 2024 announcement describes Lindstrom as a Southeast Florida home-services leader that joined the group, making it a directly evidenced roll-up target in the metro's broader South Florida market."
+        },
+        {
+          "trades": "HVAC, refrigeration, plumbing",
+          "parent": "Flint Group (sponsor not identified in the retrieved evidence)",
+          "type": "pe_rollup_brand",
+          "company": "Air Around the Clock",
+          "note": "A May 2026 report says Flint Group acquired this South Florida-based, nearly 40-year-old HVAC, refrigeration, and plumbing provider; the retrieved excerpt did not specify the county, so county-level Miami coverage should be checked before outreach."
+        },
+        {
+          "trades": "HVAC",
+          "parent": "Exuma Capital Partners (Anthony Perera)",
+          "type": "pe_rollup_brand",
+          "company": "Air Pros USA",
+          "note": "The Air Pros site is based in Coral Springs, and a March 2026 report says founder Anthony Perera reacquired the legacy Florida operations through Exuma in June 2025; this is a current post-reacquisition platform lead."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical (network-wide; the local locator explicitly showed plumbing/electrical)",
+          "parent": "ARS/Rescue Rooter network (current sponsor not established in the retrieved evidence)",
+          "type": "franchise",
+          "company": "ARS/Rescue Rooter Miami",
+          "note": "ARS's Florida locator returned five providers, including a Miami listing, and explicitly displayed plumbing and electrical services, making it a credible national-network target for multi-trade CSR software."
+        },
+        {
+          "trades": "Plumbing",
+          "parent": "Neighborly (KKR announced an acquisition in 2021; current 2025-26 sponsor was not independently re-verified in the retrieved evidence)",
+          "type": "franchise",
+          "company": "Mr. Rooter Plumbing — North Miami Beach",
+          "note": "The official local page says licensed local plumbers are available 24/7 in North Miami Beach; Neighborly materials identify Mr. Rooter and Mr. Electric among its home-service brands."
+        },
+        {
+          "trades": "HVAC / air conditioning",
+          "parent": "independent",
+          "type": "large_independent",
+          "company": "John C. Cassidy Air Conditioning",
+          "note": "A current search result describes it as the largest independent family-owned AC contractor in South Florida; the evidence gathered did not establish exact employee or branch counts."
+        }
+      ],
+      "rollup_activity": "Consolidation is visible in at least three recent events: Lindstrom Air Conditioning & Plumbing joined Wrench Group in February 2024; Air Pros founder Anthony Perera reacquired the legacy Florida operations through Exuma in June 2025; and Flint Group acquired South Florida-based Air Around the Clock in May 2026. The Air Around the Clock excerpt did not specify a Miami-Dade, Broward, or Palm Beach county, so that transaction is best treated as a South Florida platform-entry signal pending county-level diligence."
+    },
+    "collectedAt": "2026-08-06T23:28:04.829Z",
+    "runId": "trun_9de6befd1b374fbe9596d3b673722184"
+  },
+  "seattle": {
+    "content": {
+      "market_snapshot": "King, Pierce and Snohomish counties together represent about 4.05 million people on PSRC's regional profile (2,287,050 + 928,200 + 837,800), and the HVAC opportunity is expanding: 53% of homes in the three counties had air conditioning in 2021, up from 44% in 2019. The operating market still looks locally fragmented, but consolidation is unmistakable—PE-backed platforms are buying local brands such as Seatown and BelRed, while PitchBook data cited in 2024 counted nearly 800 PE purchases of HVAC, plumbing and electrical companies since 2022; cooling adoption and heat-pump/efficiency retrofit work are the clearest demand tailwinds, alongside recurring plumbing and electrical calls.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Apex Service Partners (Alpine Investors; Apollo Funds strategic minority investment announced May 2026)",
+          "type": "pe_rollup_brand",
+          "company": "BelRed Energy Solutions (BelRed)",
+          "note": "Seattle/Puget Sound brand; the available 2026 industry transaction dossier dates Apex's acquisition to January 2022, while BelRed currently markets all three trades in Seattle."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Champions Group / Service Champions (Odyssey Investment Partners)",
+          "type": "pe_rollup_brand",
+          "company": "Seatown Electric, Plumbing, Heating & Air",
+          "note": "Service Champions entered the Pacific Northwest by acquiring Seatown on June 12, 2023; Seatown serves King and Snohomish counties and is a strong local multi-trade platform brand."
+        },
+        {
+          "trades": "Plumbing, drain cleaning, sewer lines locally; HVAC and electrical at the national platform",
+          "parent": "American Residential Services (ARS)/Rescue Rooter national platform",
+          "type": "franchise",
+          "company": "Rescue Rooter Seattle",
+          "note": "ARS lists a Seattle-area branch in Pacific, Washington; the local listing is plumbing/sewer-led, but the parent network markets HVAC, plumbing and electrical services nationally."
+        },
+        {
+          "trades": "Plumbing, drain cleaning",
+          "parent": "Neighborly (KKR; July 2021 acquisition announcement is the latest public ownership source located)",
+          "type": "franchise",
+          "company": "Mr. Rooter Plumbing of Seattle",
+          "note": "The Seattle franchise had expanded to three branches by October 2025, making it a meaningful local plumbing call-center target even though the franchise is not a full three-trade operator."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (locally owned; no PE parent identified in the reviewed sources)",
+          "type": "large_independent",
+          "company": "Harts Services",
+          "note": "Tacoma-based local operator with a broad residential plumbing, sewer/drain, electrical, heating and cooling offering; its multi-trade mix makes it a natural CSR/dispatch software buyer."
+        },
+        {
+          "trades": "HVAC / home-energy services",
+          "parent": "No parent publicly identified in the 2026 profile reviewed (independence not conclusively proven)",
+          "type": "large_independent",
+          "company": "Washington Energy Services",
+          "note": "Long-running Lynnwood/Puget Sound HVAC operator serving Seattle since 1957 and described as one of Washington's largest HVAC companies; it is a sizable single-trade target even without a verified PE parent."
+        }
+      ],
+      "rollup_activity": "Odyssey acquired Service Champions in January 2021, and the platform entered Seattle by acquiring Seatown on June 12, 2023; a 2026 industry dossier lists BelRed Energy Solutions (Seattle/Puget Sound) as acquired by Apex in January 2022. The broader consolidation backdrop remains active: PitchBook data cited in October 2024 counted nearly 800 PE purchases of HVAC, plumbing and electrical companies since 2022, and Apex announced a strategic minority investment from Apollo Funds on May 28, 2026."
+    },
+    "collectedAt": "2026-08-06T23:28:04.919Z",
+    "runId": "trun_9de6befd1b374fbe95743340c60f23db"
+  },
+  "tucson": {
+    "content": {
+      "market_snapshot": "Pima County/Tucson is a sizable, growing residential base: the 2023 assessment reports 561,548 people and 250,561 housing units, projects 603,724 people by 2045, and estimates 62,403 new housing units needed from 2024-2045, including 49,625 units of future need. The documented market is consolidating but not fully rolled up—Rite Way/Redwood and Wrench/Parker & Sons have made platform moves while family-owned Chas Roberts and Hamstra remain meaningful local operators—and extreme summer heat produces acute AC demand, with local reporting describing a surge in service calls; population and housing growth support ongoing plumbing and electrical demand as well.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Redwood Services (Altas Partners investment announced May 2025)",
+          "type": "pe_rollup_brand",
+          "company": "Rite Way Heating, Cooling & Plumbing",
+          "note": "One of Tucson's largest residential providers, serving over 13,000 active residential customers; it acquired Southern Arizona Plumbing in October 2022."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Wrench Group (Leonard Green & Partners; TSG Consumer Partners; Oak Hill Capital)",
+          "type": "pe_rollup_brand",
+          "company": "Parker & Sons",
+          "note": "Wrench opened Parker & Sons' greenfield Tucson location on February 23, 2022 at 3801 N. Hwy Drive; the brand offers full-trade residential service."
+        },
+        {
+          "trades": "HVAC",
+          "parent": "Authority Brands (franchisor; Benjamin Franklin Plumbing is a sister brand)",
+          "type": "franchise",
+          "company": "Superior One Hour Heating & Air Conditioning of Tucson",
+          "note": "A locally owned Tucson franchise operated by Elizabeth and Kenzy Cerveri; Authority Brands officially lists One Hour and Benjamin Franklin Plumbing in its home-service brand family."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "Independent / family-owned; no PE parent publicly identified in the reviewed 2025-2026 sources",
+          "type": "large_independent",
+          "company": "Chas Roberts Air Conditioning, Inc.",
+          "note": "Arizona's largest HVAC provider, with eight locations including Tucson; the company has been family-owned and operated since its 1942 founding and also offers plumbing."
+        },
+        {
+          "trades": "HVAC",
+          "parent": "Independent (family-owned)",
+          "type": "large_independent",
+          "company": "Hamstra Heating & Cooling",
+          "note": "A long-standing Tucson operator serving the area since November 1983; its public profile describes it as family-owned and operated with more than 60 Tucson employees."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "Independent / no parent listed in the current company profile",
+          "type": "large_independent",
+          "company": "Alaskan Air Conditioning & Heating",
+          "note": "A Tucson/Phoenix operator founded in 1972; its Tucson service page covers AC and heating, while its company profile identifies plumbing and offices in both cities."
+        }
+      ],
+      "rollup_activity": "Rite Way announced the acquisition of Southern Arizona Plumbing on October 5, 2022; Rite Way is listed as a Tucson partner of Redwood Services, which announced a significant equity investment from Altas Partners in May 2025. Separately, Wrench Group made a greenfield Tucson entry with Parker & Sons on February 23, 2022 at 3801 N. Hwy Drive; Wrench's sponsor update names Leonard Green & Partners, TSG Consumer Partners, and Oak Hill Capital."
+    },
+    "collectedAt": "2026-08-07T00:13:11.226Z",
+    "runId": "trun_9de6befd1b374fbe9f887f8add837731"
+  },
+  "abq": {
+    "content": {
+      "market_snapshot": "The three-county footprint is a sizeable existing-home market: Albuquerque city was estimated at 556,588 residents on July 1, 2025, and Bernalillo County alone had 306,879 housing units and a 64.5% owner-occupied rate for 2020-2024. Census has current 2020-25 population and housing-estimate series, but the retrieved material did not provide a defensible combined Bernalillo/Sandoval/Valencia growth rate, so I do not claim positive growth. The reviewed local roster is visibly fragmented—several leading brands describe local or family ownership, while the clearest national-platform local brand found is Neighborly's independently owned Mr. Rooter—and demand should be resilient from year-round repair/emergency work plus seasonal heating and cooling; that last demand statement is an evidence-based synthesis, not a published market-size estimate.",
+      "buyers": [
+        {
+          "trades": "Plumbing, drain/sewer, septic",
+          "parent": "Neighborly / Neighborly Assetco LLC (franchisor; local franchise independently owned)",
+          "type": "franchise",
+          "company": "Mr. Rooter Plumbing of Albuquerque",
+          "note": "Verified local Neighborly franchise with an Albuquerque residential service page; the national platform supplies brand, operating playbook, and cross-brand lead infrastructure."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent / locally owned and managed (no PE parent publicly identified)",
+          "type": "large_independent",
+          "company": "TLC Plumbing Heating Cooling Electrical",
+          "note": "Long-established local full-service brand: its site says it has operated for more than 35 years and serves Albuquerque, Santa Fe, and Rio Rancho, with 24-hour emergency coverage."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent / locally owned family company (no PE parent publicly identified)",
+          "type": "large_independent",
+          "company": "Albuquerque Plumbing, Heating & Cooling (ABQ Plumb)",
+          "note": "Local 24/7/365 full-service operator covering plumbing, HVAC, and electrical needs; its site says homeowners have trusted it since 2008."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent / local owner-manager (Richard Walter; no PE parent publicly identified)",
+          "type": "large_independent",
+          "company": "Signature Heating, Cooling, Plumbing & Electrical",
+          "note": "Residential full-service provider throughout Albuquerque; the operator page confirms all three core trades and BBB identifies Richard Walter as owner/manager."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "independent / family-owned (Bill Collins, owner)",
+          "type": "large_independent",
+          "company": "Academy Plumbing, Heating & Air Conditioning",
+          "note": "Employee-/family-owned local plumbing and heating/air-conditioning business; a credible call-center target, although less public scale data is available than for TLC."
+        }
+      ],
+      "rollup_activity": "Publicly documented Albuquerque-area M&A is commercial rather than residential: Pueblo Mechanical & Controls acquired Albuquerque-based Travers Mechanical Services in July 2022, and the sources describe Travers/Pueblo as commercial HVAC/plumbing businesses; Huron Capital describes the strategy as a commercial HVAC/plumbing buy-and-build. OMERS announced its agreement to acquire Pueblo on August 5, 2022; I found no publicly verified 2025-26 residential acquisition or new PE platform entry in the three-county footprint, so no PE roll-up brand is included above."
+    },
+    "collectedAt": "2026-08-07T00:13:11.328Z",
+    "runId": "trun_9de6befd1b374fbe93582d1677af4c6a"
+  },
+  "omaha": {
+    "content": {
+      "market_snapshot": "Within the requested Douglas–Sarpy–Pottawattamie footprint, public indicators point to a large, growing market: the broader Omaha MSA was estimated at 987,800 people in 2021 and had grown 1.1% annually since 2010, while Omaha's 2025 housing report says Omaha and the metro area grew 12.8% since 2010 and Omaha issued 3,371 residential-unit permits in 2024. Demand is supported by new construction, a largely occupied housing base (418,309 MSA units in 2023, about 95% occupied), and urgent/recurring heating, cooling, plumbing and electrical work; the housing-market index rose from 75.5 to 76.2 from January 2024 to January 2025 and Omaha ranked sixth for housing demand. Consolidation is meaningful but incomplete: the latest public disclosures identify Omaha-serving PE-platform brands (Burton and John Henry), Authority Brands and Neighborly franchises, and sizable locally owned multi-trade shops.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "LightBay Capital (December 2021 growth investment; ShoreView was also disclosed in Burton's 2021 acquisition releases)",
+          "type": "pe_rollup_brand",
+          "company": "Just Call Burton / Burton A/C, Heating, Plumbing & Electrical",
+          "note": "Omaha-based full-service brand with regional roll-up activity; the public record located does not expressly re-document its ownership after the 2021 LightBay/ ShoreView disclosures, so current sponsor status should be confirmed before outreach."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Legacy Service Partners (Gridiron Capital; investment/partnership announced April–May 2023)",
+          "type": "pe_rollup_brand",
+          "company": "John Henry's Plumbing, Heating, Air & Electrical",
+          "note": "Family-origin operator serving Lincoln and Omaha since 1996, with an Omaha operating footprint; Legacy's investment makes it a high-priority platform prospect, although no later 2025–26 ownership change was located."
+        },
+        {
+          "trades": "HVAC",
+          "parent": "Authority Brands (One Hour Heating & Air Conditioning franchisor)",
+          "type": "franchise",
+          "company": "McCarthy's One Hour Heating & Air Conditioning",
+          "note": "Locally owned/operated One Hour franchise serving Omaha and Council Bluffs with heating, cooling, repair, installation and maintenance services."
+        },
+        {
+          "trades": "Plumbing",
+          "parent": "Neighborly (Mr. Rooter Plumbing franchise network)",
+          "type": "franchise",
+          "company": "Mr. Rooter Plumbing of Omaha",
+          "note": "Local Neighborly plumbing operator serving Omaha and multiple Douglas/Sarpy communities, with drain, sewer-line, repair and emergency-plumbing demand."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical (plus appliance repair and generators)",
+          "parent": "Locally owned; no disclosed PE or franchisor parent",
+          "type": "large_independent",
+          "company": "ServiceOne Heating, Cooling, Plumbing & Electrical",
+          "note": "30-plus years in the Omaha/Council Bluffs market and 55–60 licensed technicians; its one-brand, multi-trade model is a natural call-center/CSR software target."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "No disclosed PE or franchisor parent (local operator; independence is not expressly stated on the cited page)",
+          "type": "large_independent",
+          "company": "Thermal Heating, Air & Plumbing",
+          "note": "Established in 1968, reports more than 100 technicians, and serves Omaha, Bellevue, Papillion and Council Bluffs—strong local scale even though a parent-company relationship is not publicly identified."
+        }
+      ],
+      "rollup_activity": "The Omaha-linked consolidation record found is concentrated in 2021–2023: Omaha-headquartered Burton acquired Lincoln-based Star City Heating & Cooling in March 2021 and Holland Heating & Air/Mr. Holland's Electric in July 2021, followed by LightBay's Burton growth investment announced December 14, 2021; Legacy Service Partners announced its John Henry's investment/partnership on April 3 and May 2, 2023. I found no publicly announced 2024–2026 acquisition specifically inside Douglas, Sarpy or Pottawattamie counties in the searched sources, so the 2021–2023 items should be read as Omaha-linked/regional platform activity rather than all as in-county transactions."
+    },
+    "collectedAt": "2026-08-07T00:13:21.313Z",
+    "runId": "trun_9de6befd1b374fbe9c4901e62426078c"
+  },
+  "desmoines": {
+    "content": {
+      "market_snapshot": "Greater Des Moines has a meaningful and growing residential-service base: the broader regional partnership reports 13.4% population growth over the last decade, while a housing profile covering Dallas, Madison, Polk and Warren counties reports that more than 27% of housing units were built after 2000. In the defined Polk-Dallas-Warren footprint, the competitive picture appears mixed and still locally fragmented rather than dominated by one national roll-up, combining a reported Heartland transaction, multi-market Golden Rule, a Neighborly franchise and several long-standing independents; recurring seasonal heating/cooling loads plus plumbing, electrical and equipment-replacement work are the core service-demand drivers.",
+      "buyers": [
+        {
+          "trades": "HVAC",
+          "parent": "Merit Management Group (reported acquirer on Nov. 15, 2025; PE/sponsor characterization not confirmed)",
+          "type": "pe_rollup_brand",
+          "company": "Heartland Heating & Cooling",
+          "note": "Current Des Moines/Grimes operator; Preqin reports the 2025 acquisition, but the company site still says locally owned, so the sponsor relationship should be treated as reported and not fully reconciled."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (privately held; Mark and Miranda Paup)",
+          "type": "large_independent",
+          "company": "Golden Rule Plumbing, Heating, Cooling & Electrical",
+          "note": "Operates a 100-plus-vehicle fleet across the Des Moines, Omaha and Salt Lake City metros, giving it unusually large multi-market scale for an independent target."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (Brian Leech, owner)",
+          "type": "large_independent",
+          "company": "Service Legends",
+          "note": "Established Central Iowa residential brand spanning heating, cooling, plumbing and related home-comfort services; its local ownership makes it a direct CSR/call-center prospect."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "independent (Randy Keys / Dennis Lane; no current sponsor verified)",
+          "type": "large_independent",
+          "company": "Schaal Plumbing, Heating & Cooling",
+          "note": "A 2020 industry profile described Schaal as a 70-person Des Moines business; employee owners bought it in 2014, indicating meaningful local operating scale without a verified current roll-up parent."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "independent (Jason Gassmann; sole owner reported in 2020)",
+          "type": "large_independent",
+          "company": "Bell Brothers Heating, Cooling & Plumbing",
+          "note": "Long-standing Des Moines operator; a 2020 report said Gassmann became sole owner, and the local brand markets both HVAC and plumbing services."
+        },
+        {
+          "trades": "HVAC",
+          "parent": "Neighborly (Aire Serv franchisor)",
+          "type": "franchise",
+          "company": "Aire Serv of NW Des Moines",
+          "note": "Confirmed Urbandale-area Neighborly franchise and a clean local entry point into a national home-services network; franchises are independently operated but benefit from shared brand and support infrastructure."
+        }
+      ],
+      "rollup_activity": "The clearest recent transaction is Heartland Heating & Cooling: Preqin reports that Merit Management Group acquired it on November 15, 2025, with expansion into wider markets planned; a separate market-data result also lists Merit investments in Metro Heating & Cooling (Des Moines) and Heartland. No reliable 2025-26 announcement found in the research tied the defined metro to Apex, Wrench, Turnpoint, Leap, Sila, Horizon or ARS; Bell Brothers' 2020 ownership transfer and Schaal's 2014 employee buyout are older local succession events rather than recent roll-up activity."
+    },
+    "collectedAt": "2026-08-07T00:16:15.093Z",
+    "runId": "trun_9de6befd1b374fbeb963b2a8b491aa12"
+  },
+  "louisville": {
+    "content": {
+      "market_snapshot": "HUD's broader Louisville, KY-IN metropolitan area (which is larger than the five-county perimeter specified here) was estimated at 1.33 million people on October 1, 2024; population growth averaged 0.1% annually from 2020, while single-family permits rose 11% to 3,400 in the year ending September 2024. The residential-trades opportunity is therefore a large, relatively slow-growing installed base with active new construction and recurring heating/cooling, plumbing, and electrical repair or replacement demand; the industry remains fragmented, but PE-backed platforms, franchises, and multi-brand operators are consolidating service capacity. An exact five-county population total was not established in the sources reviewed, so the 1.33 million figure should be treated as broader-MSA context rather than a precise total for Jefferson, Oldham, Bullitt, Clark, and Floyd counties.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "Wrench Group (Leonard Green & Partners/management majority; TSG Consumer Partners and Oak Hill minority in the last disclosed Nov. 2022 transaction; no newer change identified)",
+          "type": "pe_rollup_brand",
+          "company": "Jarboe's Plumbing, Heating & Cooling",
+          "note": "Wrench's official materials identify Jarboe's as its Greater Louisville brand, serving heating, cooling, and plumbing since 1986; its own site also markets electrical service."
+        },
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "Turnpoint Services (OMERS Private Equity acquired Turnpoint in Nov. 2020; no newer change identified)",
+          "type": "pe_rollup_brand",
+          "company": "Dauenhauer Plumbing | Heating & Air",
+          "note": "Turnpoint's current brand page places Dauenhauer in Louisville and Lexington, serving the market since 1958 and operating seven days a week."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Len The Plumber (PE-backed operating parent; current sponsor not publicly confirmed in the reviewed sources)",
+          "type": "pe_rollup_brand",
+          "company": "Tom Drexler Plumbing, Air & Electric",
+          "note": "Tom Drexler is an active Louisville/Southern Indiana multi-trade brand; PitchBook identifies it as acquired by Len The Plumber, an operating subsidiary with private-equity-backed status."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "American Residential Services / ARS (GI Partners; majority investment announced in 2020; no newer change identified)",
+          "type": "pe_rollup_brand",
+          "company": "ARS/Rescue Rooter — Louisville",
+          "note": "ARS's official Kentucky locator lists a Louisville branch at 2815 Watterson Trail and HVAC, plumbing, and electrical services; ARS is a national residential-services platform."
+        },
+        {
+          "trades": "plumbing",
+          "parent": "Authority Brands (franchisor)",
+          "type": "franchise",
+          "company": "Benjamin Franklin Plumbing — Eastern Louisville",
+          "note": "The official local page lists an Eastern Louisville location at 3832 Taylorsville Road, 24/7 answering, and license M7523; Authority Brands owns the Benjamin Franklin Plumbing franchise brand."
+        },
+        {
+          "trades": "HVAC, electrical, plumbing, remodeling",
+          "parent": "independent (family-owned; no PE parent identified in the reviewed sources)",
+          "type": "large_independent",
+          "company": "Maeser Master Services",
+          "note": "Maeser presents itself as family-owned and markets HVAC, electrical, plumbing, and remodeling services in the Louisville/Lexington area, with a stated 1975 heritage."
+        }
+      ],
+      "rollup_activity": "The most clearly documented Louisville-area consolidation steps were Wrench Group's Midwest partnership that listed Jarboe's in June 2021, Jarboe's acquisition of Pacific Plumbing in January 2021, HomeServe's acquisition of Louisville-based United Plumbing in January 2022, and Len The Plumber's acquisition of Tom Drexler in April 2022. I did not find a later 2023-2026 Louisville-specific transaction that was sufficiently identified in the reviewed public sources; Southern Home Services' 2026 Dunn's announcement was identified as an Alabama deal, so it was not used as evidence of a Louisville operating brand."
+    },
+    "collectedAt": "2026-08-07T00:16:15.182Z",
+    "runId": "trun_9de6befd1b374fbe9cd81f371c09b62e"
+  },
+  "richmond": {
+    "content": {
+      "market_snapshot": "Richmond City plus Henrico, Chesterfield, and Hanover sit in a roughly 1.3 million-person MSA; the broader Richmond area grew from 1.19 million people in 2010 to 1.37 million in 2024 (+15.3%), although projected permits fell to 7,816 units in 2024 from nearly 9,976 in 2023. The market is still locally fragmented—long-standing family-owned operators coexist with PE-backed platforms and franchise networks—while the broader trades sector is consolidating rapidly: PitchBook data cited in 2024 put PE purchases of HVAC, plumbing, and electrical companies at nearly 800 since 2022. Demand is supported by a large homeowner/service base, recurring seasonal heating-and-cooling loads, and urgent plumbing/electrical work; Woodfin reports serving more than 225,000 Richmond homeowners since 1977, and the National Weather Service tracks both heating and cooling degree days for Richmond.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing",
+          "parent": "Southern Home Services (Gryphon Investors)",
+          "type": "pe_rollup_brand",
+          "company": "Blazer Heating, Air & Plumbing",
+          "note": "Southern Home Services acquired this 37-year-old locally owned Richmond operator on May 19, 2026, creating the clearest new PE-backed platform footprint in the metro."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "American Residential Services (GI Partners)",
+          "type": "pe_rollup_brand",
+          "company": "ARS/Rescue Rooter of Richmond",
+          "note": "The Richmond operation is identified at a Chester address in the target geography; ARS markets all three trades nationally and GI Partners was reported as its majority owner in March 2026."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Service Experts platform (current parent/sponsor not publicly disclosed in the reviewed sources)",
+          "type": "pe_rollup_brand",
+          "company": "Service Experts Heating & Air Conditioning — Greater Richmond",
+          "note": "Its official Richmond page markets all three trades; the platform reports 75+ locations and acquired 19 HomeServe service centers in 2024, making it a high-value call-center target despite the unresolved current sponsor."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Authority Brands (franchisor)",
+          "type": "franchise",
+          "company": "One Hour Heating & Air Conditioning / Benjamin Franklin Plumbing / Mister Sparky — Richmond",
+          "note": "The local East/West Richmond and Midlothian pages show a multi-brand, 24/7 franchise cluster spanning HVAC, plumbing, and electrical, giving one franchise operator several AI-CSR use cases."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (family-owned)",
+          "type": "large_independent",
+          "company": "Woodfin — Your Home Team",
+          "note": "A major Richmond incumbent: family-owned, serving more than 225,000 Richmond homeowners since 1977, with explicit coverage of Henrico, Chesterfield, and Hanover."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (family-owned; Basim Mansour identified as owner)",
+          "type": "large_independent",
+          "company": "Michael & Son Services — Richmond",
+          "note": "Founded in 1976 and still described through its family-business history, Michael & Son has a substantial regional multi-trade platform and a dedicated Richmond operation."
+        }
+      ],
+      "rollup_activity": "On May 19, 2026, Gryphon-backed Southern Home Services acquired Blazer Heating, Air & Plumbing, a 37-year-old locally owned Richmond company, putting a PE-backed house of brands directly into the metro. That transaction fits the national consolidation pattern: PitchBook data cited in October 2024 said PE investors had purchased nearly 800 HVAC, plumbing, and electrical companies since 2022; no additional Richmond-metro transaction was confirmed in the reviewed sources."
+    },
+    "collectedAt": "2026-08-07T00:16:15.268Z",
+    "runId": "trun_9de6befd1b374fbea47f36b1bcbde3c1"
+  },
+  "greenville": {
+    "content": {
+      "market_snapshot": "Using July 1, 2025 Census estimates, the user-defined four-county footprint totals 1,323,110 residents (Greenville 583,125; Spartanburg 380,857; Anderson 219,930; Pickens 139,198). Growth and housing signals are strong: HUD’s Greenville-Anderson-Mauldin HMA (a slightly different geography) estimated 970,300 people and demand for 15,000 new homes, while Pickens County permitted 1,050 sales units in 2024, up 81% from 2023. The market is meaningfully consolidated but still fragmented—TurnPoint/OMERS and Gryphon-backed Southern Home Services sit alongside sizeable family-owned independents; new construction plus likely recurring repair/replacement and emergency work drives demand for centralized CSR capacity.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "TurnPoint Services (OMERS Private Equity)",
+          "type": "pe_rollup_brand",
+          "company": "Corley Plumbing Air Electric",
+          "note": "Greenville brand operating since 1986; TurnPoint announced its acquisition in December 2019 (closed December 3) and the brand covers all three residential trades."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Southern Home Services / Southern HVAC Corp. (majority-owned by Gryphon Investors)",
+          "type": "pe_rollup_brand",
+          "company": "Five Star Plumbing Heating Cooling & Electrical",
+          "note": "Greenville-based Upstate brand serving homeowners since 1984; Southern acquired it in April 2021 and later added Spartanburg’s George M. Hill & Sons to the platform."
+        },
+        {
+          "trades": "Plumbing and drain cleaning",
+          "parent": "Neighborly (Mr. Rooter Plumbing franchise network)",
+          "type": "franchise",
+          "company": "Mr. Rooter Plumbing of Greenville",
+          "note": "The Greenville territory markets drain cleaning, water-heater repair and 24/7 emergency plumbing, while the Neighborly network describes Mr. Rooter as one of North America’s largest full-service plumbing/drain-cleaning brands."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (family-owned; explicitly not PE-owned)",
+          "type": "large_independent",
+          "company": "Preferred Home Services",
+          "note": "Provides all three trades across Greenville and the Upstate; its own current materials explicitly say it is family-owned and not owned by a private-equity firm."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent / no parent publicly identified in reviewed sources",
+          "type": "large_independent",
+          "company": "Dipple Plumbing, Electrical, Heating & Air",
+          "note": "A durable local full-service brand founded in 1979 that says it has served Upstate South Carolina for more than 45 years."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent / no parent publicly identified in reviewed sources",
+          "type": "large_independent",
+          "company": "Davis Services, Inc.",
+          "note": "Reports more than 100 employees and over 80 trucks/vans serving Upstate South Carolina and the foothills of North Carolina—unusually strong independent scale for a CSR software target."
+        }
+      ],
+      "rollup_activity": "TurnPoint entered Greenville by acquiring Corley Plumbing Air Electric (announced December 6, 2019; transaction closed December 3, 2019); current ownership is OMERS Private Equity after Trivest Fund V’s sale. Southern HVAC/Southern Home Services acquired Greenville-based Five Star in April 2021 and Spartanburg-based George M. Hill & Sons on March 21, 2023, while Southern remained Gryphon-backed in 2026."
+    },
+    "collectedAt": "2026-08-07T00:16:15.357Z",
+    "runId": "trun_9de6befd1b374fbeb5834126f965aed6"
+  },
+  "tulsa": {
+    "content": {
+      "market_snapshot": "The four requested counties total about 941,036 residents using the U.S. Census July 1, 2025 estimates (Tulsa 698,782; Rogers 102,197; Wagoner 93,263; Osage 46,794). Tulsa's housing data is a positive demand signal: the city permits about 830 housing units per year versus 1,290 needed to meet demand. The market is fragmented but actively consolidating into multi-brand and regional platforms, while recurring heating/cooling, plumbing and electrical repair demand is supported by Tulsa's 823 average heating degree days and ongoing housing needs.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, electrical (platform; local-brand coverage varies)",
+          "parent": "HomeTown Services (CenterOak Partners and Churchill Asset Management listed as investors; control terms not publicly clear)",
+          "type": "pe_rollup_brand",
+          "company": "HomeTown Services Tulsa brands: Air Assurance / Mullin Plumbing",
+          "note": "HomeTown's portfolio lists Air Assurance in Tulsa and Mullin Plumbing in Tulsa; public transaction profiles date their acquisitions to November 3, 2021 and December 10, 2021, making this a key multi-brand platform target."
+        },
+        {
+          "trades": "HVAC, plumbing, heating",
+          "parent": "Redwood Services (Altas Partners equity investor since 2025; Union Main Group founding backer)",
+          "type": "pe_rollup_brand",
+          "company": "Hendrick Heat, Air & Plumbing",
+          "note": "Redwood announced its first Oklahoma investment on July 7, 2026; Hendrick serves more than 25,000 greater-Tulsa customers, employs over 90 people, and joined Redwood's 20-plus-company network."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (locally and family owned, self-described)",
+          "type": "large_independent",
+          "company": "Quality Heating, Cooling, Plumbing & Electric",
+          "note": "The Glenpool-based operator reports locations in Glenpool, Tulsa and Bartlesville, service since 2014, and an acquisition of Tulsa's Reed Family Heating & Air; it has also added electrical service."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (Paschal says it is not private-equity-owned)",
+          "type": "large_independent",
+          "company": "Paschal Air, Plumbing & Electric (including the Robison Air Tulsa brand)",
+          "note": "Paschal has an explicit Tulsa location and multi-trade service offering and announced the Robison Air acquisition/Tulsa expansion in December 2025, creating a substantial regional platform target."
+        },
+        {
+          "trades": "HVAC",
+          "parent": "Neighborly (franchisor)",
+          "type": "franchise",
+          "company": "Aire Serv of South Tulsa",
+          "note": "The local Bixby-based Aire Serv is BBB-accredited and serves South Tulsa; official Aire Serv/Neighborly materials identify Aire Serv as a Neighborly company."
+        },
+        {
+          "trades": "HVAC, electrical, plumbing",
+          "parent": "Ownership unresolved: Airco says third-generation family-owned, while HomeTown Services lists Airco Service in its brand portfolio",
+          "type": "large_independent",
+          "company": "Airco Service",
+          "note": "Established in 1961, Airco describes itself as the largest Northeastern Oklahoma family-owned and operated residential/commercial HVAC, electric and plumbing company; the conflicting HomeTown listing means its 2025-2026 parent should be confirmed directly before treating it as a HomeTown-controlled brand."
+        }
+      ],
+      "rollup_activity": "Public transaction profiles record HomeTown Services' acquisitions of Air Assurance (November 3, 2021) and Mullin Plumbing (December 10, 2021); Quality separately announced its acquisition of Reed Family Heating & Air of Tulsa. Paschal announced the Robison Air/Tulsa expansion in December 2025, and Redwood announced its first Oklahoma investment in Tulsa's Hendrick Heat, Air & Plumbing on July 7, 2026. No verified Tulsa operating brand for Apex, Wrench, Turnpoint, Leap, Sila, Horizon or ARS/Rescue Rooter was found in the evidence gathered, so those platforms are not presented as local buyers."
+    },
+    "collectedAt": "2026-08-07T00:16:15.604Z",
+    "runId": "trun_9de6befd1b374fbea47c25a907669513"
+  },
+  "cosprings": {
+    "content": {
+      "market_snapshot": "The El Paso–Teller footprint is a roughly 782,000-person residential market: El Paso County had 757,040 people and 320,334 housing units on July 1, 2025, while Teller County's 2025 population was 24,756; El Paso's owner-occupied rate was 66.2% in 2020–2024. Growth and service demand have durable support from a Colorado Springs planning projection of more than 250,000 additional El Paso County residents by 2045, in-migration/low-vacancy dynamics, a 1982 median housing-construction year in the available assessment (structural context rather than a current estimate), and seasonal heating/cooling needs. Consolidation is meaningful but incomplete: Air Pros assembled three Colorado Springs operators in 2020, while the current field still includes a Neighborly franchise and multiple family- or woman-owned independents; Air Pros' March 2025 Chapter 11 makes the roll-up's current Colorado ownership unclear.",
+      "buyers": [
+        {
+          "trades": "HVAC, plumbing, ductwork (an Air Pros-era source also described electrical)",
+          "parent": "Air Pros USA (2020 acquirer; Chapter 11 filed March 16, 2025; current Colorado ownership not publicly confirmed)",
+          "type": "pe_rollup_brand",
+          "company": "One Source Home Service",
+          "note": "The strongest disclosed local platform signal: the 2020 acquisition material described 60 trucks and 115 employees serving Colorado Springs and Pueblo; its current site remains live, but ownership needs diligence after Air Pros' restructuring."
+        },
+        {
+          "trades": "Plumbing and drain cleaning",
+          "parent": "Neighborly (franchise network)",
+          "type": "franchise",
+          "company": "Mr. Rooter Plumbing of Colorado Springs",
+          "note": "A directly evidenced local operator at 1508 Dustry Drive; its official pages identify it as a Neighborly company and market emergency, repair, and drain services."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (woman-owned; no PE platform identified)",
+          "type": "large_independent",
+          "company": "Smith Total Home (Smith Plumbing, Heating, Cooling & Electrical)",
+          "note": "Long-running Colorado Springs/Front Range multi-trade shop, explicitly operating since 1974 and woman-owned."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "independent (family-owned)",
+          "type": "large_independent",
+          "company": "WireNut Home Services",
+          "note": "Colorado Springs-headquartered/local brand; its current marketing covers electrical, heating/cooling, and plumbing, and its company profile says it has been family-owned and operating since 2004."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical (also garage doors)",
+          "parent": "independent / owner-led (no PE sponsor identified)",
+          "type": "large_independent",
+          "company": "Awesome Home Services",
+          "note": "Current Colorado Springs base at 805 N Murray Blvd.; LinkedIn lists 11–50 employees and the company markets all three core trades, making it a credible local AI-CSR prospect even if smaller than One Source."
+        }
+      ],
+      "rollup_activity": "The clearest metro consolidation was Air Pros USA's 2020 build-out: it acquired Climate Solutions in January 2020, added Wright Total Indoor Comfort, and acquired One Source on December 5, 2020; One Source continued under its own brand in Colorado Springs/Pueblo and was described at 60 trucks/115 employees. Air Pros commenced Chapter 11 on March 16, 2025, while the June 2025 founder-reacquisition announcement covered legacy Florida operations only; I found no public confirmation of a newer owner for Colorado One Source or a later Colorado Springs-specific acquisition in the sources reviewed."
+    },
+    "collectedAt": "2026-08-07T00:16:15.700Z",
+    "runId": "trun_9de6befd1b374fbe8169a5eb5e6a4fb9"
+  },
+  "boise": {
+    "content": {
+      "market_snapshot": "The latest available estimate puts Ada and Canyon counties at 847,840 residents in 2025, up 3% from 2024; Boise's housing analysis calls for 2,019 new or significantly renovated units per year for the next decade. The market remains fragmented but is consolidating into out-of-state, multi-brand platforms, while household growth, construction/renovation, and non-discretionary repair, replacement, and maintenance across heating/cooling, plumbing, and electrical systems support recurring call volume.",
+      "buyers": [
+        {
+          "trades": "HVAC",
+          "parent": "The SEER Group (private-equity-backed roll-up)",
+          "type": "pe_rollup_brand",
+          "company": "Western Heating & Air Conditioning",
+          "note": "Long-running Boise/Treasure Valley HVAC brand (serving since 1967); SEER took a majority stake in 2021 and expanded its Boise platform with Veterans Plumbing and K-F Electric in 2024, with Veterans merged into Western in March 2025."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Apex Service Partners (Apex West Region Holdco)",
+          "type": "pe_rollup_brand",
+          "company": "Right Now Heating & Air Conditioning",
+          "note": "Boise-headquartered, three-trade operator; Apex acquired it in 2021 and current records cited in 2025 reporting place it in Apex West Region Holdco."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Intermountain Home Services (Bestige Holdings)",
+          "type": "pe_rollup_brand",
+          "company": "Diamond Heating, Cooling, Plumbing & Electric",
+          "note": "1999-founded Garden City/Treasure Valley brand with an all-trade offering; Bestige acquired it in 2021 and folded it into the current Intermountain Home Services platform."
+        },
+        {
+          "trades": "HVAC, plumbing, electrical",
+          "parent": "Any Hour Group (Knox Lane)",
+          "type": "pe_rollup_brand",
+          "company": "Perfect Plumbing & Air",
+          "note": "Boise/Treasure Valley multi-trade brand serving the market locally owned and operated; acquired by Any Hour in 2022, giving an AI vendor a platform-level and brand-level buyer."
+        },
+        {
+          "trades": "Plumbing, drain cleaning",
+          "parent": "Neighborly (Mr. Rooter franchisor)",
+          "type": "franchise",
+          "company": "Mr. Rooter Plumbing of Boise",
+          "note": "Dedicated Boise operator with residential plumbing coverage; Mr. Rooter is a Neighborly subsidiary whose franchised businesses are independently owned and operated, making it a relevant network/local-operator call-center target."
+        },
+        {
+          "trades": "Residential HVAC, plumbing",
+          "parent": "independent (no PE or franchisor identified in the reviewed sources)",
+          "type": "large_independent",
+          "company": "YMC Inc. Mechanical Contractor",
+          "note": "Best-documented long-lived independent candidate: Boise-area residential and commercial HVAC plus plumbing/mechanical services and more than 55 years of operating history; employee/revenue scale and ownership are not publicly disclosed in the reviewed material, so 'largest' is not independently confirmed."
+        }
+      ],
+      "rollup_activity": "SEER announced the Boise acquisitions of K-F Electric and Veterans Plumbing on October 22, 2024; Idaho records cited by BoiseDev say Veterans was merged into Western in March 2025. The broader wave includes Bestige/Intermountain's Diamond (2021) and Master Plumbing (sold by August 2022), Apex's Right Now (2021) and Owyhee (2022), and Any Hour/Knox Lane's Perfect Plumbing & Air (2022)."
+    },
+    "collectedAt": "2026-08-07T00:16:15.798Z",
+    "runId": "trun_9de6befd1b374fbe93e3440cf4aaa74f"
+  }
+}
